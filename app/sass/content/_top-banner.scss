@@ -1,0 +1,67 @@
+.top-banner {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100vh;
+  margin-top: -155px;
+  background-image: url('../img/top-banner.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+  }
+
+  &__descr {
+    position: relative;
+    float: left;
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include box-sizing(border-box);
+    border-top: 2px solid #fffef6;
+    border-bottom: 2px solid #fffef6;
+  }
+
+  &__title{
+    position: relative;
+    float: left;
+    width: 100%;
+    font-family: $ProximaNovaLight;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fffef6;
+    text-align: justify;
+    text-transform: uppercase;
+
+    > b {
+      margin-left: 10px;
+      color: #fffef6;
+      text-transform: lowercase;
+      font-family: $ProximaNovaBold;
+    }
+
+  }
+
+  &__subtitle{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+    font-family: $ProximaNovaLight;
+    font-size: 16px;
+    color: #fffef6;
+    text-align: justify;
+  }
+
+}
