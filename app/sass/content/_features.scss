@@ -1,8 +1,9 @@
-.school {
+.features {
   position: relative;
   float: left;
   width: 100%;
-  background-color: #fcfaeb;
+  background-color: #fff;
+  margin-top: -5px;
 
   .container {
     text-align: center;
@@ -16,47 +17,40 @@
     padding-bottom: 5px;
     @include box-sizing(border-box);
     text-align: center;
-    border-bottom: 1px solid #4a5b8f;
-    font-family: $ProximaNovaLight;
+    border-bottom: 1px solid #a98c5d;
+    font-family: $ProximaNovaBold;
     font-size: 22px;
-    color: #4a5b8f;
-
-    b {
-      padding-left: 6px;
-      font-family: $ProximaNovaBold;
-      color: #938c4e;
-    }
-
+    color: #a98c5d;
   }
 
   &__wrapper {
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
-    @include justify-content(space-around);
+    @include justify-content(space-between);
     position: relative;
     float: left;
     width: 100%;
-    margin-bottom: 70px;
+    margin-top: 20px;
+    margin-bottom: 90px;
 
     &--item {
       position: relative;
       float: left;
-      width: calc(25% - 25px);
-      width: -moz-calc(25% - 25px);
+      width: calc(30% - 25px);
+      width: -moz-calc(30% - 25px);
 
-      .photo {
+      .photo{
         position: relative;
         float: left;
-        width: 100%;
-        height: 190px;
+        width: 228px;
+        height: 260px;
         overflow: hidden;
 
         img, svg {
           size: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
-
       }
 
       .title{
@@ -66,26 +60,9 @@
         font-size: 26px;
         font-family: $ProximaNovaLight;
         text-align: justify;
-        color: #4a5b8f;
-        margin-top: 20px;
-        margin-bottom: 0;
-
-        b {
-          padding-left: 6px;
-          font-family: $ProximaNovaBold;
-        }
-
-      }
-
-      .date{
-        position: relative;
-        float: left;
-        width: 100%;
-        margin-top: 0;
-        margin-bottom: 15px;
-        text-align: justify;
-        font-size: 18px;
         color: #aba266;
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
 
       .text{
@@ -106,22 +83,21 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
-      
+
       .more{
         display: block;
         position: absolute;
-        right: 0;
-        bottom: -5px;
+        left: -9px;
+        bottom: 0;
         padding: 10px;
         background-color: #fff;
         text-align: center;
         z-index: 1;
-        
+
         span {
-          background-color: #78a1c0;
+          background-color: #000;
           padding: 5px 22px;
           font-size: 18px;
-          font-style: italic;
           color: #fff;
 
           &:after {
@@ -133,7 +109,7 @@
             width: 0;
             height: 0;
             border-top: 16px solid transparent;
-            border-left: 11px solid #78a1c0;
+            border-left: 11px solid #000;
             border-bottom: 16px solid transparent;
           }
         }
