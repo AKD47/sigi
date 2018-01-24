@@ -7,8 +7,36 @@ a {
   overflow: hidden;
 
   img {
-    size:  100%;
+    size: 100%;
     object-fit: contain;
   }
 
+}
+
+.facebook {
+  background-image: url('../img/icons/fb-icon.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.instagram {
+  background-image: url('../img/icons/ins-icon.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.twitter {
+  background-image: url('../img/icons/tw-icon.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.youtube {
+  background-image: url('../img/icons/yt-icon.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }

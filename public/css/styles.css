@@ -129,6 +129,30 @@ a {
   object-fit: contain;
 }
 
+.facebook {
+  background-image: url("../img/icons/fb-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.instagram {
+  background-image: url("../img/icons/ins-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.twitter {
+  background-image: url("../img/icons/tw-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.youtube {
+  background-image: url("../img/icons/yt-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .header__navigation {
   position: relative;
   float: left;
@@ -724,7 +748,7 @@ a {
   flex-direction: column;
   position: relative;
   float: left;
-  width: 20%;
+  width: 25%;
   padding-left: 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -768,20 +792,75 @@ a {
   text-transform: lowercase;
 }
 
-.footer__element--partner {
+.footer__partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
   float: left;
-  width: 200px;
-  height: 58px;
-  overflow: hidden;
+  width: 196px;
+  padding-left: 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.footer__element--partner img,
-.footer__element--partner svg {
+.footer__partner--title {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 22px;
+  text-align: left;
+  color: #fffef6;
+  font-size: 18px;
+  font-family: "ProximaNova Bold";
+  text-transform: uppercase;
+}
+
+.footer__partner--partner {
+  position: relative;
+  float: left;
+  width: 116px;
+  height: 30px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.footer__partner--partner img,
+.footer__partner--partner svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
+  float: left;
+  width: -webkit-calc(30% - 196px);
+  width: calc(30% - 196px);
+  margin-top: 43px;
+}
+
+.footer__socials a {
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #fffef6;
 }
 
 /*# sourceMappingURL=styles.css.map */
