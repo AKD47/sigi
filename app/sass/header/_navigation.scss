@@ -40,7 +40,7 @@
 
   }
 
-  &__submenu{
+  &__submenu {
     @include display-flex(flex);
     @include justify-content(flex-start);
     position: relative;
@@ -58,13 +58,13 @@
 
       &:nth-of-type(2) {
 
-        a{
+        a {
           margin-left: 30px;
         }
 
       }
 
-      &:nth-of-type(3),  &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6){
+      &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6) {
         @include display-flex(flex);
         @include flex-wrap(wrap);
         @include justify-content(flex-end);
@@ -80,7 +80,7 @@
         //flex: 1 0 0;
       }
 
-     > a {
+      > a {
         position: relative;
         float: left;
         //width: 100%;
@@ -91,7 +91,7 @@
         color: #fffef6;
         font-size: 20px;
 
-        > span{
+        > span {
           position: relative;
           float: left;
           width: 30px;
@@ -100,10 +100,10 @@
           border-radius: 50%;
           background-color: #fffef6;
 
-            img, svg {
-              size: 100%;
-              object-fit: contain;
-            }
+          img, svg {
+            size: 100%;
+            object-fit: contain;
+          }
 
         }
 
@@ -111,6 +111,70 @@
 
     }
 
+  }
+
+  &__trigger {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -56px;
+    left: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+    z-index: 15;
+    cursor: pointer;
+
+    @include breakpoint(max-width 660px) {
+      display: block;
+    }
+
+    span {
+      display: block;
+      height: 2px;
+      width: 18px;
+      background-color: #00365f;
+      position: absolute;
+      left: 50%;
+      margin-left: -9px;
+      top: 50%;
+      margin-top: -1px;
+    }
+
+    span:first-of-type {
+      transition: all 0.2s;
+      margin-top: -6px;
+      content: '';
+    }
+    span:last-of-type {
+      transition: all 0.2s;
+      margin-top: 4px;
+      content: '';
+    }
+
+  }
+
+  &__trigger.js-trigger-active {
+    background-color: #03274c;
+
+    span:nth-of-type(2) {
+      display: none;
+    }
+
+    span {
+      background-color: #fff;
+
+      &:first-of-type {
+        transform: rotate(135deg);
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        transform: rotate(-134deg);
+        margin-top: 0;
+      }
+    }
   }
 
 }

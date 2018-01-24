@@ -284,6 +284,81 @@ a {
   object-fit: contain;
 }
 
+.header__trigger {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -56px;
+  left: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  z-index: 15;
+  cursor: pointer;
+}
+
+@media (max-width: 660px) {
+  .header__trigger {
+    display: block;
+  }
+}
+
+.header__trigger span {
+  display: block;
+  height: 2px;
+  width: 18px;
+  background-color: #00365f;
+  position: absolute;
+  left: 50%;
+  margin-left: -9px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.header__trigger span:first-of-type {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-top: -6px;
+  content: '';
+}
+
+.header__trigger span:last-of-type {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-top: 4px;
+  content: '';
+}
+
+.header__trigger.js-trigger-active {
+  background-color: #03274c;
+}
+
+.header__trigger.js-trigger-active span:nth-of-type(2) {
+  display: none;
+}
+
+.header__trigger.js-trigger-active span {
+  background-color: #fff;
+}
+
+.header__trigger.js-trigger-active span:first-of-type {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-top: 0;
+}
+
+.header__trigger.js-trigger-active span:last-of-type {
+  -webkit-transform: rotate(-134deg);
+  -ms-transform: rotate(-134deg);
+  transform: rotate(-134deg);
+  margin-top: 0;
+}
+
 .header {
   position: relative;
   float: left;
