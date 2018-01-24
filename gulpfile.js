@@ -70,8 +70,8 @@ gulp.task('sass', function () { // Создаем таск Sass
             cascade: true
         }),
         sorting(),
-        stylefmt,
-        cssnano
+        // cssnano,
+        stylefmt
     ];
     return gulp.src('app/sass/**/*.scss')
         .pipe(plumber())
@@ -79,7 +79,7 @@ gulp.task('sass', function () { // Создаем таск Sass
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(rename({
-            suffix: ".min",
+            // suffix: ".min",
             extname: ".css"
         }))
         .pipe(sourcemaps.write('.', {sourceRoot: 'css-source'}))
@@ -104,29 +104,29 @@ gulp.task('browser-sync', function () { // Создаем таск browser-sync
 });
 
 /*vendor*/
-gulp.task('vendor', ['clean'], function () {
-    return gulp.src(['app/js-libs/jquery-2.1.3.min.js',
-        'app/js-libs/jquery-ui.min.js',
-        'app/js-libs/bootstrap.min.js',
-        'app/js-libs/jquery.fancybox.js',
-        'app/js-libs/fileinput.js',
-        'app/js-libs/jquery.jscrollpane.min.js',
-        'app/js-libs/jquery.mousewheel.js',
-        'app/js-libs/perfect-scrollbar.jquery.js',
-        'app/js-libs/lightbox.min.js',
-        'app/js-libs/countdown.js',
-        'app/js-libs/map.js',
-        'app/js-libs/validation.js',
-        'app/js-libs/fotorama.js',
-        'app/js-libs/slick.js',
-        'app/js-libs/owl.carousel.min.js'])// Берем все необходимые библиотеки
-        .pipe(plumber())
-        .pipe(concat('vendor.js'))// Собираем их в кучу в новом файле vendor.js
-        .pipe(rename({}))
-        /*.pipe(uglify()) // Сжимаем JS файл*/
-        .pipe(plumber.stop())
-        .pipe(gulp.dest('./public/js'));// Выгружаем в папку js
-});
+// gulp.task('vendor', ['clean'], function () {
+//     return gulp.src(['app/js-libs/jquery-2.1.3.min.js',
+//         'app/js-libs/jquery-ui.min.js',
+//         'app/js-libs/bootstrap.min.js',
+//         'app/js-libs/jquery.fancybox.js',
+//         'app/js-libs/fileinput.js',
+//         'app/js-libs/jquery.jscrollpane.min.js',
+//         'app/js-libs/jquery.mousewheel.js',
+//         'app/js-libs/perfect-scrollbar.jquery.js',
+//         'app/js-libs/lightbox.min.js',
+//         'app/js-libs/countdown.js',
+//         'app/js-libs/map.js',
+//         'app/js-libs/validation.js',
+//         'app/js-libs/fotorama.js',
+//         'app/js-libs/slick.js',
+//         'app/js-libs/owl.carousel.min.js'])// Берем все необходимые библиотеки
+//         .pipe(plumber())
+//         .pipe(concat('vendor.js'))// Собираем их в кучу в новом файле vendor.js
+//         .pipe(rename({}))
+//         /*.pipe(uglify()) // Сжимаем JS файл*/
+//         .pipe(plumber.stop())
+//         .pipe(gulp.dest('./public/js'));// Выгружаем в папку js
+// });
 
 /*compress*/
 gulp.task('compress', ['clean'], function () {// Создаем таск compress
@@ -134,10 +134,10 @@ gulp.task('compress', ['clean'], function () {// Создаем таск compres
         .pipe(plumber())
         .pipe(concat('script.js'))// Собираем их в кучу в новом файле script.js
         .pipe(rename({
-            suffix: ".min",// Добавляем суффикс .min
+            // suffix: ".min",// Добавляем суффикс .min
             extname: ".js"// Добавляем окончание .js
         }))
-        .pipe(uglify()) // Сжимаем JS файл
+        // .pipe(uglify()) // Сжимаем JS файл
         .pipe(plumber.stop())
         .pipe(gulp.dest('./public/js'))// Выгружаем в папку js
         .pipe(browserSync.stream({}));

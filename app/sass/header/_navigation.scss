@@ -1,0 +1,116 @@
+.header {
+
+  &__navigation {
+    position: relative;
+    float: left;
+    width: calc(100% - 125px);
+    width: -moz-calc(100% - 125px);
+    background-color: #a1865a;
+    margin-top: 44px;
+  }
+
+  &__nav {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding-left: 120px;
+    padding-right: 70px;
+    @include box-sizing(border-box);
+
+    > li {
+
+      > a {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+        color: #050c08;
+        font-size: 20px;
+        font-family: $ProximaNovaBold;
+      }
+
+    }
+
+  }
+
+  &__submenu{
+    @include display-flex(flex);
+    @include justify-content(flex-start);
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding-left: 156px;
+    @include box-sizing(border-box);
+
+    > li {
+      flex: 3 0 0;
+      position: relative;
+      float: left;
+
+      &:nth-of-type(2) {
+
+        a{
+          margin-left: 30px;
+        }
+
+      }
+
+      &:nth-of-type(3),  &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6){
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include justify-content(flex-end);
+        flex: 2 0 0;
+        padding-right: 40px;
+        @include box-sizing(border-box);
+
+        > a {
+          padding: 0;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        //flex: 1 0 0;
+      }
+
+     > a {
+        position: relative;
+        float: left;
+        //width: 100%;
+        margin: 10px 0;
+        //padding-left: 40px;
+        @include box-sizing(border-box);
+        text-align: center;
+        color: #fffef6;
+        font-size: 20px;
+
+        > span{
+          position: relative;
+          float: left;
+          width: 30px;
+          height: 30px;
+          overflow: hidden;
+          border-radius: 50%;
+          background-color: #fffef6;
+
+            img, svg {
+              size: 100%;
+              object-fit: contain;
+            }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
