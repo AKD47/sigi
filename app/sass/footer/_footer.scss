@@ -1,0 +1,134 @@
+.footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #000;
+
+  &__logo {
+    @include display-flex(flex);
+    @include flex-direction(column);
+    position: relative;
+    float: left;
+    width: 20%;
+
+    .logo {
+      position: relative;
+      float: left;
+      width: 125px;
+      height: 140px;
+      overflow: hidden;
+      margin-top: 15px;
+
+      img, svg {
+        size: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &--title {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 0;
+      color: #d6b780;
+      font-size: 18px;
+      font-family: $ProximaNovaBold;
+      text-transform: uppercase;
+    }
+
+    &--address {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      color: #d6b780;
+      font-size: 18px;
+      font-family: $ProximaNovaRegular;
+      text-transform: uppercase;
+    }
+
+    &--call {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      color: #d6b780;
+      font-size: 18px;
+      font-family: $ProximaNovaRegular;
+      text-transform: uppercase;
+
+      &:last-of-type {
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__element {
+    @include display-flex(flex);
+    @include flex-direction(column);
+    position: relative;
+    float: left;
+    width: 20%;
+    padding-left: 30px;
+    @include box-sizing(border-box);
+
+    &--title {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 22px;
+      text-align: left;
+      color: #fffef6;
+      font-size: 18px;
+      font-family: $ProximaNovaBold;
+      text-transform: uppercase;
+    }
+
+    &--menu {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+
+        > a {
+          position: relative;
+          float: left;
+          width: 100%;
+          line-height: 2.0;
+          text-align: left;
+          color: #fffef6;
+          font-size: 18px;
+          font-family: $ProximaNovaRegular;
+          text-transform: uppercase;
+        }
+
+        > a.footer__element--email {
+          text-transform: lowercase;
+        }
+
+      }
+
+    }
+
+    &--partner {
+      position: relative;
+      float: left;
+      width: 200px;
+      height: 58px;
+      overflow: hidden;
+
+      img, svg {
+        size: 100%;
+        object-fit: contain;
+      }
+    }
+
+  }
+}

@@ -638,4 +638,150 @@ a {
   border-bottom: 16px solid transparent;
 }
 
+.footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #000;
+}
+
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  float: left;
+  width: 20%;
+}
+
+.footer__logo .logo {
+  position: relative;
+  float: left;
+  width: 125px;
+  height: 140px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.footer__logo .logo img,
+.footer__logo .logo svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.footer__logo--title {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #d6b780;
+  font-size: 18px;
+  font-family: "ProximaNova Bold";
+  text-transform: uppercase;
+}
+
+.footer__logo--address {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
+  color: #d6b780;
+  font-size: 18px;
+  font-family: "ProximaNova Regular";
+  text-transform: uppercase;
+}
+
+.footer__logo--call {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
+  color: #d6b780;
+  font-size: 18px;
+  font-family: "ProximaNova Regular";
+  text-transform: uppercase;
+}
+
+.footer__logo--call:last-of-type {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.footer__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  float: left;
+  width: 20%;
+  padding-left: 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.footer__element--title {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 22px;
+  text-align: left;
+  color: #fffef6;
+  font-size: 18px;
+  font-family: "ProximaNova Bold";
+  text-transform: uppercase;
+}
+
+.footer__element--menu {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__element--menu li > a {
+  position: relative;
+  float: left;
+  width: 100%;
+  line-height: 2.0;
+  text-align: left;
+  color: #fffef6;
+  font-size: 18px;
+  font-family: "ProximaNova Regular";
+  text-transform: uppercase;
+}
+
+.footer__element--menu li > a.footer__element--email {
+  text-transform: lowercase;
+}
+
+.footer__element--partner {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 58px;
+  overflow: hidden;
+}
+
+.footer__element--partner img,
+.footer__element--partner svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
 /*# sourceMappingURL=styles.css.map */
