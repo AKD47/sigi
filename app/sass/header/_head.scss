@@ -3,6 +3,11 @@
   float: left;
   width: 100%;
   z-index: 1;
+  background-color: #101211;
+
+  @include breakpoint(max-width 660px) {
+    background-color: #101211;
+  }
 
   &__logo {
     position: relative;
@@ -11,6 +16,13 @@
     height: 140px;
     overflow: hidden;
     margin-top: 15px;
+    margin-bottom: 15px;
+
+    @include breakpoint(max-width 660px) {
+      width: 75px;
+      height: 65px;
+      margin-left: 25px;
+    }
 
     img, svg {
       size: 100%;

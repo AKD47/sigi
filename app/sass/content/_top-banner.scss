@@ -9,6 +9,14 @@
   -webkit-background-size: cover;
   background-size: cover;
 
+  @include breakpoint(max-width 990px) {
+    height: 60vh;
+  }
+
+  @include breakpoint(max-width 660px) {
+    display: none;
+  }
+
   &:before {
     position: absolute;
     content: '';
@@ -30,6 +38,11 @@
     @include box-sizing(border-box);
     border-top: 2px solid #fffef6;
     border-bottom: 2px solid #fffef6;
+
+    @include breakpoint(max-width 990px) {
+      width: 70%;
+    }
+
   }
 
   &__title{

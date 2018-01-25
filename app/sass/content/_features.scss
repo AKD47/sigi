@@ -5,6 +5,23 @@
   background-color: #fff;
   margin-top: -5px;
 
+  &__bg{
+    position: absolute;
+    width: 100%;
+    top: 22%;
+    left: 0;
+
+    @include breakpoint(max-width 660px) {
+     display: none;
+    }
+
+    img, svg {
+      size: 100%;
+      object-fit: contain;
+    }
+
+  }
+
   .container {
     text-align: center;
   }
@@ -39,6 +56,12 @@
       float: left;
       width: calc(30% - 25px);
       width: -moz-calc(30% - 25px);
+
+      @include breakpoint(max-width 660px) {
+        width: calc(100% - 10px);
+        width: -moz-calc(100% - 10px);
+        margin-bottom: 50px;
+      }
 
       .photo{
         position: relative;
@@ -82,6 +105,15 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @include breakpoint(max-width 1024px) {
+          margin-bottom: 40px;
+        }
+
+        @include breakpoint(max-width 660px) {
+          margin-bottom: 30px;
+        }
+
       }
 
       .more{

@@ -2,7 +2,7 @@
   position: relative;
   float: left;
   width: 100%;
-  background-color: #000;
+  background-color: #101211;
 
   &__logo {
     @include display-flex(flex);
@@ -11,6 +11,10 @@
     float: left;
     width: 20%;
 
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+
     .logo {
       position: relative;
       float: left;
@@ -18,6 +22,12 @@
       height: 140px;
       overflow: hidden;
       margin-top: 15px;
+
+      @include breakpoint(max-width 660px) {
+        width: 75px;
+        height: 65px;
+        margin-left: 25px;
+      }
 
       img, svg {
         size: 100%;
@@ -61,6 +71,12 @@
       &:last-of-type {
         margin-top: 30px;
         margin-bottom: 50px;
+
+        @include breakpoint(max-width 660px) {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+
       }
     }
   }
@@ -74,6 +90,10 @@
     padding-left: 30px;
     @include box-sizing(border-box);
 
+    @include breakpoint(max-width 660px) {
+     width: 100%;
+    }
+
     &--title {
       position: relative;
       float: left;
@@ -85,6 +105,12 @@
       font-size: 18px;
       font-family: $ProximaNovaBold;
       text-transform: uppercase;
+
+      @include breakpoint(max-width 660px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
     }
 
     &--menu {
@@ -130,6 +156,10 @@
     padding-left: 30px;
     @include box-sizing(border-box);
 
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+
     &--title {
       position: relative;
       float: left;
@@ -141,6 +171,12 @@
       font-size: 18px;
       font-family: $ProximaNovaBold;
       text-transform: uppercase;
+
+      @include breakpoint(max-width 660px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
     }
 
     &--partner {
@@ -167,6 +203,18 @@
     width: calc(100% - (20% + (25%*2 + 196px)));
     margin-top: 43px;
 
+    @include breakpoint(max-width 990px) {
+      width: 100%;
+      @include justify-content(flex-start);
+      margin-top: 20px;
+    }
+
+    @include breakpoint(max-width 660px) {
+     width: 100%;
+      @include justify-content(center);
+      margin-top: 20px;
+    }
+
     a {
       position: relative;
       float: left;
@@ -176,6 +224,37 @@
       overflow: hidden;
       border-radius: 50%;
       background-color: #fffef6;
+    }
+
+  }
+  
+  &__art {
+    position: absolute;
+    bottom: 53px;
+    right: 0;
+    color: #fff;
+    text-transform: uppercase;
+
+    @include breakpoint(max-width 990px) {
+      position: relative;
+      float: left;
+      right: inherit;
+      bottom: inherit;
+      width: 100%;
+      @include justify-content(center);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(max-width 660px) {
+      position: relative;
+      float: left;
+      right: inherit;
+      bottom: inherit;
+      width: 100%;
+      @include justify-content(center);
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
 
   }
