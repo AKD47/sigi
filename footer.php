@@ -62,6 +62,13 @@
     </div>
 </footer>
 
+<div id="contacts" class="modal__contacts">
+    <h3 class="modal__contacts--title">Kontakty</h3>
+    <a href="#">tel.: +420 724 360 835</a>
+    <a href="maito:horst@sigiteam.cz">horst@sigiteam.cz</a>
+</div>
+<div id="overlay" class="overlay"></div>
+
 <?php wp_footer(); ?>
 
 </body>

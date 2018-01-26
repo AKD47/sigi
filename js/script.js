@@ -28,6 +28,24 @@ $(document).ready(function(){
         });
     }
     /*close*/
+
+    /*send message modal*/
+    $(document).on('click', '.contacts-modal', function () {
+        event.preventDefault();
+        $('#overlay').fadeIn(400,
+            function () {
+                $('.modal__contacts').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '#overlay', function () {
+        $('.modal__contacts').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close*/
 });
 
 //preloader

@@ -18,11 +18,11 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" type="image/png" sizes="16x16"
           href="<?php bloginfo('template_directory'); ?>/img/icons/favicon.ico">
-   <!-- <div class="preloader-wrap js-open">
+    <div class="preloader-wrap js-open">
         <div class="preloader">
-            <img src="<?php /*bloginfo('template_directory'); */?>/img/icons/top-logo.png" class="c-gif js-gif">
+            <img src="<?php bloginfo('template_directory'); ?>/img/icons/top-logo.png" class="c-gif js-gif">
         </div>
-    </div>-->
+    </div>
 
     <?php wp_head(); ?>
 </head>
@@ -49,7 +49,7 @@
                 <li><a href="#">Zapasy</a></li>
                 <li><a href="#">Osobnosti</a></li>
                 <li><a href="#">Treninky</a></li>
-                <li><a href="#">Kontakty</a></li>
+                <li><a href="#" class="contacts-modal">Kontakty</a></li>
             </ul>
 
             <ul class="header__submenu">
