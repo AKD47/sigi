@@ -10,23 +10,57 @@
  */
 
 ?>
+<footer class="footer">
 
-	</div><!-- #content -->
+    <div class="container">
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sibi-team' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sibi-team' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sibi-team' ), 'sibi-team', '<a href="http://underscores.me/">Underscores.me</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+        <div class="footer__logo">
+
+            <div class="logo">
+                <img src="<?php bloginfo('template_directory'); ?>/img/icons/footer-logo.png">
+            </div>
+
+            <p class="footer__logo--title">sigi team s.r.o.</p>
+
+            <p class="footer__logo--address">Vyvysen.573 Praha 5 - Lipence 155 31</p>
+            <a href="#" class="footer__logo--call">ICO: 048 92 895</a>
+            <a href="tel:+420 724 360 835" class="footer__logo--call">tel.: +420 724 360 835</a>
+
+        </div>
+        <div class="footer__element">
+            <p class="footer__element--title">Menu </p>
+            <ul class="footer__element--menu">
+                <li><a href="#">Sportovni udalosti</a></li>
+                <li><a href="#">Zapasy</a></li>
+                <li><a href="#">Osobnosti</a></li>
+                <li><a href="#">Treninky</a></li>
+                <li><a href="#">Kontakty</a></li>
+            </ul>
+
+        </div>
+        <div class="footer__element">
+            <p class="footer__element--title">Kontakty</p>
+            <ul class="footer__element--menu">
+                <li><a href="#">tel.: +420 724 360 835</a></li>
+                <li><a href="maito:" class="footer__element--email">horst@sigiteam.cz</a></li>
+            </ul>
+
+        </div>
+        <div class="footer__partner">
+            <p class="footer__partner--title">Partner</p>
+            <a class="footer__partner--partner">
+                <img src="<?php bloginfo('template_directory'); ?>/img/partner-logo.png">
+            </a>
+        </div>
+        <div class="footer__socials">
+            <a href="#" class="facebook"></a>
+            <a href="#" class="instagram"></a>
+            <a href="#" class="twitter"></a>
+            <a href="#" class="youtube"></a>
+        </div>
+        <div class="footer__art">&copy; 2003-2017 sigi team s.r.o. all rights reserved</div>
+    </div>
+</footer>
 
 <?php wp_footer(); ?>
 
