@@ -1,21 +1,28 @@
 <?php if (!defined('FW')) {
     die('Forbidden');
 }
-/*
-  * Верстка шорткода
-  * весь контент лежит в переменной $atts
-  */
+/*variable for news category*/
+$news = new WP_Query(array(
+    'posts_per_page' => 4,
+    'category_name' => 'news'
+));
+
+/*variable for trener category*/
+$trener = new WP_Query(array(
+    'posts_per_page' => 4,
+    'category_name' => 'trener'
+));
 
 ?>
-<section class="top-banner" style="background-image: url(<?= $atts['top_banner_bg']['url'];?>);">
+<section class="top-banner" style="background-image: url(<?= $atts['top_banner_bg']['url']; ?>);">
 
     <div class="container">
 
         <div class="top-banner__descr">
 
-            <h1 class="top-banner__title"><?= $atts['top_banner_title'];?></h1>
+            <h1 class="top-banner__title"><?= $atts['top_banner_title']; ?></h1>
 
-            <p class="top-banner__subtitle"><?= $atts['top_banner_descr'];?></p>
+            <p class="top-banner__subtitle"><?= $atts['top_banner_descr']; ?></p>
 
         </div>
 
@@ -31,68 +38,29 @@
 
         <div class="school__wrapper">
 
-            <div class="school__wrapper--item">
+            <!--loop-->
+            <?php if ($news->have_posts()) : ?>
 
-                <div class="photo">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/photo_1.png">
-                </div>
+                <?php while ($news->have_posts()) :
+                    $news->the_post(); ?>
 
-                <h3 class="title">Sigi team vs<b>Cechtice</b></h3>
+                    <div class="school__wrapper--item">
+                        <div class="photo">
+                            <?php the_post_thumbnail(); ?>
+                        </div>
 
-                <p class="date">16.06.2017 - TJ Sokol Cechtice</p>
+                        <h3 class="title"><?php the_title(); ?></h3>
 
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur
-                    culpa debitis deserunt dicta dolorem dolorum earum excepturi explicabo maiores necessitatibus
-                    numquam possimus provident quam repudiandae rerum, sit, suscipit.</p>
-                <a href="news.html" class="more"><span>vice</span></a>
+                        <p class="date"><?php the_date(); ?></p>
 
-            </div>
+                        <div class="text"><?php the_content(); ?></div>
+                        <a href="<?php the_permalink() ?>" class="more"><span>vice</span></a>
 
-            <div class="school__wrapper--item">
+                    </div>
 
-                <div class="photo">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/photo_2.png">
-                </div>
-
-                <h3 class="title">Sigi team vs<b>Cechtice</b></h3>
-
-                <p class="date">16.06.2017 - TJ Sokol Cechtice</p>
-
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur
-                    culpa debitis deserunt dicta dolorem dolorum earum excepturi explicabo maiores necessitatibus
-                    numquam possimus provident quam repudiandae rerum, sit, suscipit.</p>
-                <a href="news.html" class="more"><span>vice</span></a>
-
-            </div>
-
-            <div class="school__wrapper--item">
-
-                <div class="photo"><img src="<?php bloginfo('template_directory'); ?>/img/photo_3.png"></div>
-
-                <h3 class="title">Sigi team vs<b>Cechtice</b></h3>
-
-                <p class="date">16.06.2017 - TJ Sokol Cechtice</p>
-
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur
-                    culpa debitis deserunt dicta dolorem dolorum earum excepturi explicabo maiores necessitatibus
-                    numquam possimus provident quam repudiandae rerum, sit, suscipit.</p>
-                <a href="news.html" class="more"><span>vice</span></a>
-            </div>
-
-            <div class="school__wrapper--item">
-
-                <div class="photo"><img src="<?php bloginfo('template_directory'); ?>/img/photo_4.png"></div>
-
-                <h3 class="title">Sigi team vs<b>Cechtice</b></h3>
-
-                <p class="date">16.06.2017 - TJ Sokol Cechtice</p>
-
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur
-                    culpa debitis deserunt dicta dolorem dolorum earum excepturi explicabo maiores necessitatibus
-                    numquam possimus provident quam repudiandae rerum, sit, suscipit.</p>
-                <a href="news.html" class="more"><span>vice</span></a>
-
-            </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+            <!--end loop-->
 
         </div>
 
@@ -116,53 +84,29 @@
 
         <div class="features__wrapper">
 
-            <div class="features__wrapper--item">
+            <!--loop-->
+            <?php if ($trener->have_posts()) : ?>
 
-                <div class="photo">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/trener-1.png">
-                </div>
+                <?php while ($trener->have_posts()) :
+                    $trener->the_post(); ?>
 
-                <h3 class="title">Milo Kral</h3>
+                    <div class="features__wrapper--item">
+                        <div class="photo">
+                            <?php the_post_thumbnail(); ?>
+                        </div>
 
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur
-                    culpa debitis deserunt dicta dolorem dolorum earum excepturi explicabo maiores necessitatibus
-                    numquam possimus provident quam repudiandae rerum, sit, suscipit.</p>
+                        <h3 class="title"><?php the_title(); ?></h3>
 
-                <a href="person.html" class="more"><span>vice</span></a>
+                        <p class="date"><?php the_date(); ?></p>
 
-            </div>
+                        <div class="text"><?php the_content(); ?></div>
+                        <a href="<?php the_permalink() ?>" class="more"><span>vice</span></a>
 
-            <div class="features__wrapper--item">
+                    </div>
 
-                <div class="photo">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/trener-2.png">
-                </div>
-
-                <h3 class="title">Agata Prendi</h3>
-
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur
-                    culpa debitis deserunt dicta dolorem dolorum earum excepturi explicabo maiores necessitatibus
-                    numquam possimus provident quam repudiandae rerum, sit, suscipit.</p>
-
-                <a href="person.html" class="more"><span>vice</span></a>
-
-            </div>
-
-            <div class="features__wrapper--item">
-
-                <div class="photo">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/trener-3.png">
-                </div>
-
-                <h3 class="title">Viku Petr</h3>
-
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur
-                    culpa debitis deserunt dicta dolorem dolorum earum excepturi explicabo maiores necessitatibus
-                    numquam possimus provident quam repudiandae rerum, sit, suscipit.</p>
-
-                <a href="person.html" class="more"><span>vice</span></a>
-
-            </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+            <!--end loop-->
 
         </div>
 
