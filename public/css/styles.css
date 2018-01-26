@@ -754,12 +754,20 @@ a {
 
 .school__wrapper--item .text {
   display: block;
-  display: -webkit-box;
   position: relative;
   float: left;
   width: 100%;
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+.school__wrapper--item .text > p {
+  display: block;
+  display: -webkit-box;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
   text-align: justify;
   font-size: 16px;
   color: #3e3c3f;
@@ -773,7 +781,7 @@ a {
 }
 
 @media (max-width: 1025px) {
-  .school__wrapper--item .text {
+  .school__wrapper--item .text > p {
     margin-bottom: 40px;
   }
 }
@@ -929,8 +937,27 @@ a {
   position: relative;
   float: left;
   width: 100%;
+  text-align: justify;
+  font-size: 16px;
+  color: #3e3c3f;
+  line-height: 1.2;
+  height: 153.6px;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+.features__wrapper--item .text > p {
+  display: block;
+  display: -webkit-box;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
   text-align: justify;
   font-size: 16px;
   color: #3e3c3f;
@@ -944,13 +971,13 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .features__wrapper--item .text {
+  .features__wrapper--item .text > p {
     margin-bottom: 40px;
   }
 }
 
 @media (max-width: 660px) {
-  .features__wrapper--item .text {
+  .features__wrapper--item .text > p {
     margin-bottom: 30px;
   }
 }

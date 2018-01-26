@@ -94,24 +94,44 @@
         position: relative;
         float: left;
         width: 100%;
-        margin-top: 0;
-        margin-bottom: 15px;
         text-align: justify;
         font-size: 16px;
         color: #3e3c3f;
         line-height: 1.2;
-        height: calc(16px * 1.2 * 8);
+        height: 153.6px;
         -webkit-line-clamp: 8;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
+        margin-top: 0;
+        margin-bottom: 15px;
 
-        @include breakpoint(max-width 1024px) {
-          margin-bottom: 40px;
-        }
+        > p {
+          display: block;
+          display: -webkit-box;
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 0;
+          text-align: justify;
+          font-size: 16px;
+          color: #3e3c3f;
+          line-height: 1.2;
+          height: calc(16px * 1.2 * 8);
+          -webkit-line-clamp: 8;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
 
-        @include breakpoint(max-width 660px) {
-          margin-bottom: 30px;
+          @include breakpoint(max-width 1024px) {
+            margin-bottom: 40px;
+          }
+
+          @include breakpoint(max-width 660px) {
+            margin-bottom: 30px;
+          }
+
         }
 
       }
