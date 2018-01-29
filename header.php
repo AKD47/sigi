@@ -58,22 +58,22 @@
                 <li>
                     <a href="#">
                         <span>
-                            <img src="<?php bloginfo('template_directory'); ?>/img/icons/fb-icon.png">
+                           <i aria-hidden="true" class="fa fa-facebook"></i>
                         </span>
                     </a>
                     <a href="#">
                         <span>
-                            <img src="<?php bloginfo('template_directory'); ?>/img/icons/ins-icon.png">
+                             <i aria-hidden="true" class="fa fa-instagram"></i>
                         </span>
                     </a>
                     <a href="#">
                         <span>
-                            <img src="<?php bloginfo('template_directory'); ?>/img/icons/tw-icon.png">
+                           <i aria-hidden="true" class="fa fa-twitter"></i>
                         </span>
                     </a>
                     <a href="#">
                         <span>
-                            <img src="<?php bloginfo('template_directory'); ?>/img/icons/yt-icon.png">
+                           <i aria-hidden="true" class="fa fa-youtube"></i>
                         </span>
                     </a>
                 </li>

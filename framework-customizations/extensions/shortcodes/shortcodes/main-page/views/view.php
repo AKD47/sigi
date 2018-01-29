@@ -51,7 +51,7 @@ $trener = new WP_Query(array(
 
                         <h3 class="title"><?php the_title(); ?></h3>
 
-                        <p class="date"><?php the_date(); ?></p>
+                        <p class="date"><?php the_time( 'd.m.Y' ); ?></p>
 
                         <div class="text"><?php the_content(); ?></div>
                         <a href="<?php the_permalink() ?>" class="more"><span>vice</span></a>
@@ -97,7 +97,7 @@ $trener = new WP_Query(array(
 
                         <h3 class="title"><?php the_title(); ?></h3>
 
-                        <p class="date"><?php the_date(); ?></p>
+<!--                        <p class="date">--><?php //the_date(); ?><!--</p>-->
 
                         <div class="text"><?php the_content(); ?></div>
                         <a href="<?php the_permalink() ?>" class="more"><span>vice</span></a>

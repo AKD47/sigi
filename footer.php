@@ -53,10 +53,18 @@
             </a>
         </div>
         <div class="footer__socials">
-            <a href="#" class="facebook"></a>
-            <a href="#" class="instagram"></a>
-            <a href="#" class="twitter"></a>
-            <a href="#" class="youtube"></a>
+            <a href="#">
+                <i aria-hidden="true" class="fa fa-facebook"></i>
+            </a>
+            <a href="#">
+                <i aria-hidden="true" class="fa fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i aria-hidden="true" class="fa fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i aria-hidden="true" class="fa fa-youtube"></i>
+            </a>
         </div>
         <div class="footer__art">&copy; 2003-2017 sigi team s.r.o. all rights reserved</div>
     </div>

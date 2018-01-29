@@ -266,10 +266,30 @@ a {
   font-family: "ProximaNova Bold";
 }
 
+.header__nav > li > a:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
 @media (max-width: 660px) {
   .header__nav > li > a {
     width: 100%;
   }
+}
+
+.header__nav > li > a:hover:after {
+  width: 100%;
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 .header__submenu {
@@ -419,13 +439,29 @@ a {
 }
 
 .header__submenu > li > a > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
   float: left;
-  width: 30px;
-  height: 30px;
+  width: 31px;
+  height: 31px;
   overflow: hidden;
   border-radius: 50%;
   background-color: #fffef6;
+  -webkit-box-shadow: 0px 0px 0px 1px #fffef6 inset;
+  box-shadow: 0px 0px 0px 1px #fffef6 inset;
+}
+
+.header__submenu > li > a > span .fa {
+  color: #a1865a;
+  font-size: 22px;
 }
 
 .header__submenu > li > a > span img,
@@ -434,6 +470,16 @@ a {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+.header__submenu > li > a:hover span {
+  background-color: #a1865a;
+  -webkit-box-shadow: 0px 0px 0px 1px #fffef6 inset;
+  box-shadow: 0px 0px 0px 1px #fffef6 inset;
+}
+
+.header__submenu > li > a:hover span .fa {
+  color: #fff;
 }
 
 .header__trigger {
@@ -754,23 +800,12 @@ a {
 
 .school__wrapper--item .text {
   display: block;
+  display: -webkit-box;
   position: relative;
   float: left;
   width: 100%;
   margin-top: 0;
   margin-bottom: 15px;
-}
-
-.school__wrapper--item .text > p {
-  display: block;
-  display: -webkit-box;
-  position: relative;
-  float: left;
-  width: 100%;
-  margin: 0;
-  text-align: justify;
-  font-size: 16px;
-  color: #3e3c3f;
   line-height: 1.2;
   height: 153.6px;
   -webkit-line-clamp: 8;
@@ -778,6 +813,17 @@ a {
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+}
+
+.school__wrapper--item .text > p {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
+  text-align: justify;
+  font-size: 16px;
+  color: #3e3c3f;
 }
 
 @media (max-width: 1025px) {
@@ -1495,6 +1541,15 @@ a {
 }
 
 .footer__socials a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
   float: left;
   width: 30px;
@@ -1503,6 +1558,17 @@ a {
   overflow: hidden;
   border-radius: 50%;
   background-color: #fffef6;
+  -webkit-box-shadow: 0px 0px 0px 1px #fffef6 inset;
+  box-shadow: 0px 0px 0px 1px #fffef6 inset;
+}
+
+.footer__socials a .fa {
+  color: #a1865a;
+  font-size: 22px;
+}
+
+.footer__socials a:hover .fa {
+  color: #000;
 }
 
 .footer__art {
