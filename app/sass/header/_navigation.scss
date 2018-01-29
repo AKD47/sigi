@@ -60,8 +60,28 @@
         font-size: 17px;
         font-family: $ProximaNovaBold;
 
+        &:after{
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 2px;
+          left: 0;
+          bottom: 0;
+          background-color: #fff;
+          @include transition(0.4s);
+        }
+
         @include breakpoint(max-width 660px) {
           width: 100%;
+        }
+
+      }
+
+      > a:hover{
+
+        &:after{
+          width: 100%;
+          @include transition(0.4s);
         }
 
       }
@@ -167,17 +187,40 @@
 
 
         > span {
+          @include display-flex(flex);
+          @include align-items(center);
+          @include justify-content(center);
           position: relative;
           float: left;
-          width: 30px;
-          height: 30px;
+          width: 31px;
+          height: 31px;
           overflow: hidden;
           border-radius: 50%;
           background-color: #fffef6;
+          box-shadow: 0px 0px 0px 1px #fffef6 inset;
+          
+          .fa {
+            color: #a1865a;
+            font-size: 22px;
+          }
 
           img, svg {
             size: 100%;
             object-fit: contain;
+          }
+
+        }
+
+      }
+
+      > a:hover {
+
+        span {
+          background-color: #a1865a;
+          box-shadow: 0px 0px 0px 1px #fffef6 inset;
+
+          .fa {
+            color: #fff;
           }
 
         }

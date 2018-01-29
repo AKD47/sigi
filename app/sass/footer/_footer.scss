@@ -216,6 +216,9 @@
     }
 
     a {
+      @include display-flex(flex);
+      @include align-items(center);
+      @include justify-content(center);
       position: relative;
       float: left;
       width: 30px;
@@ -224,8 +227,22 @@
       overflow: hidden;
       border-radius: 50%;
       background-color: #fffef6;
+      box-shadow: 0px 0px 0px 1px #fffef6 inset;
+
+      .fa {
+        color: #a1865a;
+        font-size: 22px;
+      }
+
     }
 
+    a:hover {
+
+      .fa {
+        color: #000;
+      }
+
+    }
   }
   
   &__art {
