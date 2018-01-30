@@ -5,7 +5,7 @@
     float: left;
     width: calc(100% - 125px);
     width: -moz-calc(100% - 125px);
-    background-color: #a1865a;
+    //background-color: #a1865a;
     margin-top: 44px;
 
     @include breakpoint(max-width 990px) {
@@ -33,7 +33,7 @@
     padding-right: 70px;
     @include box-sizing(border-box);
 
-    @include breakpoint(max-width 990px) {
+    @include breakpoint(max-width 1024px) {
       padding: 0;
     }
 
@@ -53,7 +53,8 @@
         position: relative;
         float: left;
         width: 100%;
-        margin: 10px 0;
+        margin-top: 17px;
+        margin-bottom: 10px;
         text-transform: uppercase;
         text-align: center;
         color: #050c08;
@@ -71,8 +72,13 @@
           @include transition(0.4s);
         }
 
+        @include breakpoint (max-width 1024px){
+          color: #fff;
+        }
+
         @include breakpoint(max-width 660px) {
           width: 100%;
+          color: #050c08;
         }
 
       }
@@ -101,7 +107,7 @@
     padding-left: 156px;
     @include box-sizing(border-box);
 
-    @include breakpoint(max-width 990px) {
+    @include breakpoint(max-width 1024px) {
       padding: 0;
     }
 
@@ -159,7 +165,7 @@
           padding: 0;
           margin-left: 5px;
           margin-right: 5px;
-
+          margin-top: 3px;
           @include breakpoint(max-width 660px) {
             width: auto;
           }

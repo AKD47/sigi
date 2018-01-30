@@ -143,8 +143,6 @@
 
     }
 
-
-
   }
 
   &__partner {
@@ -203,10 +201,11 @@
     width: calc(100% - (20% + (25%*2 + 196px)));
     margin-top: 43px;
 
-    @include breakpoint(max-width 990px) {
+    @include breakpoint(max-width 1024px) {
       width: 100%;
       @include justify-content(flex-start);
       margin-top: 20px;
+      margin-bottom: 20px;
     }
 
     @include breakpoint(max-width 660px) {

@@ -9,6 +9,29 @@
     background-color: #101211;
   }
 
+  &__bg{
+    position: absolute;
+    content: '';
+    left: -88px;
+    top: 37px;
+    width: 116%;
+    height: 56%;
+    overflow: hidden;
+    background-image: url('../img/header-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-background-size: 100%;
+
+    @include breakpoint (max-width 1024px){
+      display: none;
+    }
+
+    @include breakpoint (max-width 660px){
+      display: none;
+    } 
+    
+  }
+
   &__logo {
     position: relative;
     float: left;
@@ -17,6 +40,7 @@
     overflow: hidden;
     margin-top: 15px;
     margin-bottom: 15px;
+    z-index: 2;
 
     @include breakpoint(max-width 660px) {
       width: 75px;
