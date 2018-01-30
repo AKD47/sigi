@@ -36,6 +36,8 @@
             <img src="<?php bloginfo('template_directory'); ?>/img/icons/top-logo.png" alt="logo">
         </a>
 
+        <div class="header__bg"></div>
+
         <nav class="header__navigation">
 
             <a id="mobile-menu" class="header__trigger">
