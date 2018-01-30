@@ -856,7 +856,7 @@ a {
   position: absolute;
   content: '';
   right: 0;
-  top: 5px;
+  top: 7px;
   width: 0;
   height: 0;
   border-top: 16px solid transparent;
@@ -1280,6 +1280,10 @@ a {
   float: left;
   width: 100%;
   margin-top: 50px;
+  background-color: #fff;
+}
+
+.news__others .school__wrapper--item .more {
   background-color: #fff;
 }
 

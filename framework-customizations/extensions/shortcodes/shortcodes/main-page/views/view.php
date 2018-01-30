@@ -3,14 +3,14 @@
 }
 /*variable for news category*/
 $news = new WP_Query(array(
-    'posts_per_page' => 4,
-    'category_name' => 'news'
+    'category_name' => 'news',
+    'posts_per_page' => 4
 ));
 
 /*variable for trener category*/
 $trener = new WP_Query(array(
-    'posts_per_page' => 4,
-    'category_name' => 'trener'
+    'category_name' => 'trener',
+    'posts_per_page' => 3
 ));
 
 ?>
@@ -39,10 +39,10 @@ $trener = new WP_Query(array(
         <div class="school__wrapper">
 
             <!--loop-->
-            <?php if ($news->have_posts()) : ?>
+            <?php if ($news->have_posts()) : query_posts('cat=2')?> <!--adding to "if" category_ID-->
 
-                <?php while ($news->have_posts()) :
-                    $news->the_post(); ?>
+                <?php while (have_posts()) :
+                    the_post(); ?>
 
                     <div class="school__wrapper--item">
                         <div class="photo">
@@ -85,19 +85,17 @@ $trener = new WP_Query(array(
         <div class="features__wrapper">
 
             <!--loop-->
-            <?php if ($trener->have_posts()) : ?>
+            <?php if ($trener->have_posts()) : query_posts('cat=3'); ?> <!--adding to "if" category_ID-->
 
-                <?php while ($trener->have_posts()) :
-                    $trener->the_post(); ?>
+                <?php while (have_posts()) :
+                    the_post(); ?>
 
                     <div class="features__wrapper--item">
                         <div class="photo">
-                            <?php the_post_thumbnail(); ?>
+                            <?php the_post_thumbnail($trener->ID, 'thumbnail'); ?>
                         </div>
 
                         <h3 class="title"><?php the_title(); ?></h3>
-
-<!--                        <p class="date">--><?php //the_date(); ?><!--</p>-->
 
                         <div class="text"><?php the_content(); ?></div>
                         <a href="<?php the_permalink() ?>" class="more"><span>vice</span></a>
@@ -105,7 +103,7 @@ $trener = new WP_Query(array(
                     </div>
 
                 <?php endwhile; ?>
-            <?php endif; ?>
+            <?php endif; wp_reset_query(); ?>
             <!--end loop-->
 
         </div>
