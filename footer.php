@@ -29,13 +29,11 @@
         </div>
         <div class="footer__element">
             <p class="footer__element--title">Menu </p>
-            <ul class="footer__element--menu">
-                <li><a href="#">Sportovni udalosti</a></li>
-                <li><a href="#">Zapasy</a></li>
-                <li><a href="#">Osobnosti</a></li>
-                <li><a href="#">Treninky</a></li>
-                <li><a href="#">Kontakty</a></li>
-            </ul>
+
+            <?= wp_nav_menu( array(
+                'theme_location'  => 'footer',//add menu to footer
+                'menu_class'      => 'footer__element--menu',
+            ))?>
 
         </div>
         <div class="footer__element">

@@ -46,13 +46,10 @@
                 <span></span>
             </a>
 
-            <ul class="header__nav">
-                <li><a href="#">Sportovni udalosti</a></li>
-                <li><a href="#">Zapasy</a></li>
-                <li><a href="#">Osobnosti</a></li>
-                <li><a href="#">Treninky</a></li>
-                <li><a href="#" class="contacts-modal">Kontakty</a></li>
-            </ul>
+            <?= wp_nav_menu( array(
+                'theme_location'  => 'top',//add menu to footer
+                'menu_class'      => 'header__nav',
+            ))?>
 
             <ul class="header__submenu">
                 <li><a href="#">Fotbalove poradenstvi</a></li>

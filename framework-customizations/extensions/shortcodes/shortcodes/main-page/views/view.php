@@ -53,7 +53,7 @@ $trener = new WP_Query(array(
 
                         <p class="date"><?php the_time( 'd.m.Y' ); ?></p>
 
-                        <div class="text"><?php the_content(); ?></div>
+                        <div class="text"><?= CFS () -> get('intro_for_news')?></div>
                         <a href="<?php the_permalink() ?>" class="more"><span>vice</span></a>
 
                     </div>
@@ -97,7 +97,7 @@ $trener = new WP_Query(array(
 
                         <h3 class="title"><?php the_title(); ?></h3>
 
-                        <div class="text"><?php the_content(); ?></div>
+                        <div class="text"><?= CFS () -> get('intro_for_trener')?></div>
                         <a href="<?php the_permalink() ?>" class="more"><span>vice</span></a>
 
                     </div>

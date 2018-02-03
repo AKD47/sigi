@@ -44,8 +44,8 @@ if ( ! function_exists( 'sibi_team_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'top' => esc_html__( 'top', 'sibi-team' ),
-			'footer' => esc_html__( 'footer', 'sibi-team' ),
+			'top' => esc_html__( 'top', 'sibi-team' ),//for header menu
+			'footer' => esc_html__( 'footer', 'sibi-team' ),//for footer menu
 		) );
 
 		/*

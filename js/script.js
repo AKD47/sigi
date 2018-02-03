@@ -70,3 +70,13 @@ $(document).ready(function(){
         }, 400);
     });
 })(jQuery);
+
+$(window).on('load', function() {
+    var mainHead = $('.header'),
+        topBanner = $('.top-banner');
+    if ( topBanner.length != 0 ) {
+        mainHead.addClass('js-head-bg');
+    } else {
+        mainHead.removeClass('js-head-bg');
+    }
+});

@@ -56,7 +56,7 @@ get_header(); ?>
 
                             <p class="date"><?php the_time( 'd.m.Y' ); ?></p>
 
-                            <div class="text"><?php the_content(); ?></div>
+                            <div class="text"><?= CFS () -> get('intro_for_news')?></div>
                             <a href="<?php the_permalink() ?>" class="more"><span>vice</span></a>
 
                         </div>

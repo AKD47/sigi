@@ -54,7 +54,7 @@ get_header(); ?>
 
                             <h3 class="title"><?php the_title(); ?></h3>
 
-                            <div class="text"><?php the_content(); ?></div>
+                            <div class="text"><?= CFS () -> get('intro_for_trener')?></div>
 
                             <a href="<?php the_permalink() ?>" class="more"><span>vice</span></a>
 
