@@ -574,6 +574,16 @@ a {
   background-color: #101211;
 }
 
+.header.js-head-bg {
+  background-color: transparent;
+}
+
+@media (max-width: 660px) {
+  .header.js-head-bg {
+    background-color: #101211;
+  }
+}
+
 @media (max-width: 660px) {
   .header {
     background-color: #101211;
@@ -638,7 +648,7 @@ a {
   float: left;
   width: 100%;
   height: 100vh;
-  margin-top: -155px;
+  margin-top: -170px;
   background-image: url("../img/top-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -842,9 +852,10 @@ a {
   width: 100%;
   margin-top: 0;
   margin-bottom: 15px;
+  text-align: justify;
   line-height: 1.2;
-  height: 153.6px;
-  -webkit-line-clamp: 8;
+  height: 115.2px;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -880,24 +891,16 @@ a {
 }
 
 .school__wrapper--item .more span {
-  background-color: #78a1c0;
-  padding: 5px 22px;
+  background-image: url("../img/icons/more-post-bg-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 22px;
+  padding-right: 30px;
   font-size: 18px;
   font-style: italic;
   color: #fff;
-}
-
-.school__wrapper--item .more span:after {
-  display: block;
-  position: absolute;
-  content: '';
-  right: 0;
-  top: 7px;
-  width: 0;
-  height: 0;
-  border-top: 16px solid transparent;
-  border-left: 11px solid #78a1c0;
-  border-bottom: 16px solid transparent;
 }
 
 .features {
@@ -1023,8 +1026,8 @@ a {
   font-size: 16px;
   color: #3e3c3f;
   line-height: 1.2;
-  height: 153.6px;
-  -webkit-line-clamp: 8;
+  height: 115.2px;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -1044,12 +1047,6 @@ a {
   font-size: 16px;
   color: #3e3c3f;
   line-height: 1.2;
-  height: 153.6px;
-  -webkit-line-clamp: 8;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
 }
 
 @media (max-width: 1024px) {
@@ -1068,7 +1065,7 @@ a {
   display: block;
   position: absolute;
   left: -9px;
-  bottom: 0;
+  bottom: -35px;
   padding: 10px;
   background-color: #fff;
   text-align: center;
@@ -1076,23 +1073,15 @@ a {
 }
 
 .features__wrapper--item .more span {
-  background-color: #000;
-  padding: 5px 22px;
+  background-image: url("../img/icons/more-trener-bg-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 22px;
+  padding-right: 30px;
   font-size: 18px;
   color: #fff;
-}
-
-.features__wrapper--item .more span:after {
-  display: block;
-  position: absolute;
-  content: '';
-  right: 0;
-  top: 7px;
-  width: 0;
-  height: 0;
-  border-top: 16px solid transparent;
-  border-left: 11px solid #000;
-  border-bottom: 16px solid transparent;
 }
 
 .person {

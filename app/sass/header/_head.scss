@@ -5,6 +5,14 @@
   z-index: 1;
   background-color: #101211;
 
+  &.js-head-bg {
+    background-color: transparent;
+
+    @include breakpoint(max-width 660px) {
+      background-color: #101211;
+    }
+  }
+
   @include breakpoint(max-width 660px) {
     background-color: #101211;
   }

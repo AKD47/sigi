@@ -106,9 +106,10 @@
         width: 100%;
         margin-top: 0;
         margin-bottom: 15px;
+        text-align: justify;
         line-height: 1.2;
-        height: calc(16px * 1.2 * 8);
-        -webkit-line-clamp: 8;
+        height: calc(16px * 1.2 * 6);
+        -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -123,12 +124,6 @@
           text-align: justify;
           font-size: 16px;
           color: #3e3c3f;
-          //line-height: 1.2;
-          //height: calc(16px * 1.2 * 8);
-          //-webkit-line-clamp: 8;
-          //-webkit-box-orient: vertical;
-          //overflow: hidden;
-          //text-overflow: ellipsis;
 
           @include breakpoint(max-width 1025px) {
             margin-bottom: 40px;
@@ -147,24 +142,17 @@
         z-index: 1;
 
         span {
-          background-color: #78a1c0;
-          padding: 5px 22px;
+          background-image: url('../img/icons/more-post-bg-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 100% 100%;
+          background-size:  100% 100%;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-left: 22px;
+          padding-right: 30px;
           font-size: 18px;
           font-style: italic;
           color: #fff;
-
-          &:after {
-            display: block;
-            position: absolute;
-            content: '';
-            right: 0;
-            top: 7px;
-            width: 0;
-            height: 0;
-            border-top: 16px solid transparent;
-            border-left: 11px solid #78a1c0;
-            border-bottom: 16px solid transparent;
-          }
         }
       }
 
