@@ -30,14 +30,15 @@ $(document).ready(function(){
     /*close*/
 
     /*send message modal*/
-    $(document).on('click', '.contacts-modal', function () {
+    $(document).on('click', '.contacts-modal', function (event) {
         event.preventDefault();
         $('#overlay').fadeIn(400,
             function () {
                 $('.modal__contacts').css('display', 'block').animate({opacity: 1}, 200);
             });
     });
-    $(document).on('click', '#overlay', function () {
+    $(document).on('click', '#overlay', function (event) {
+        event.preventDefault();
         $('.modal__contacts').animate({opacity: 0}, 200,
             function () {
                 $(this).css('display', 'none');

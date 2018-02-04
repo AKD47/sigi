@@ -64,7 +64,7 @@
                 <i aria-hidden="true" class="fa fa-youtube"></i>
             </a>
         </div>
-        <div class="footer__art">&copy; 2003-2017 sigi team s.r.o. all rights reserved</div>
+        <div class="footer__art">&copy; 2003-2018 sigi team s.r.o. all rights reserved</div>
     </div>
 </footer>
 
