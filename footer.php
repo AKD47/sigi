@@ -51,15 +51,15 @@
             </a>
         </div>
         <div class="footer__socials">
-            <a href="#">
+            <a href="https://www.facebook.com/search/top/?q=sigi%20team">
                 <i aria-hidden="true" class="fa fa-facebook"></i>
             </a>
-            <a href="#">
-                <i aria-hidden="true" class="fa fa-instagram"></i>
-            </a>
-            <a href="#">
-                <i aria-hidden="true" class="fa fa-twitter"></i>
-            </a>
+<!--            <a href="#">-->
+<!--                <i aria-hidden="true" class="fa fa-instagram"></i>-->
+<!--            </a>-->
+<!--            <a href="#">-->
+<!--                <i aria-hidden="true" class="fa fa-twitter"></i>-->
+<!--            </a>-->
             <a href="#">
                 <i aria-hidden="true" class="fa fa-youtube"></i>
             </a>

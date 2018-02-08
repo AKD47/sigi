@@ -55,21 +55,21 @@
                 <li><a href="#">Fotbalove poradenstvi</a></li>
                 <li><a href="#">Fotbalova skola Horsta siegela</a></li>
                 <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/search/top/?q=sigi%20team">
                         <span>
                            <i aria-hidden="true" class="fa fa-facebook"></i>
                         </span>
                     </a>
-                    <a href="#">
-                        <span>
-                             <i aria-hidden="true" class="fa fa-instagram"></i>
-                        </span>
-                    </a>
-                    <a href="#">
-                        <span>
-                           <i aria-hidden="true" class="fa fa-twitter"></i>
-                        </span>
-                    </a>
+<!--                    <a href="#">-->
+<!--                        <span>-->
+<!--                             <i aria-hidden="true" class="fa fa-instagram"></i>-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                    <a href="#">-->
+<!--                        <span>-->
+<!--                           <i aria-hidden="true" class="fa fa-twitter"></i>-->
+<!--                        </span>-->
+<!--                    </a>-->
                     <a href="#">
                         <span>
                            <i aria-hidden="true" class="fa fa-youtube"></i>
