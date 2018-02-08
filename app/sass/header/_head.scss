@@ -29,14 +29,14 @@
     background-repeat: no-repeat;
     background-size: 100%;
     -webkit-background-size: 100%;
-
-    @include breakpoint (max-width 1024px){
-      display: none;
-    }
-
-    @include breakpoint (max-width 660px){
-      display: none;
-    } 
+    //
+    //@include breakpoint (max-width 1024px){
+    //  display: none;
+    //}
+    //
+    //@include breakpoint (max-width 660px){
+    //  display: none;
+    //}
     
   }
 
