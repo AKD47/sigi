@@ -13,7 +13,7 @@
     height: 60vh;
   }
 
-  @include breakpoint(max-width 660px) {
+  @include breakpoint(max-width 700px) {
     display: none;
   }
 
