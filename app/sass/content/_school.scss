@@ -84,6 +84,10 @@
         margin-top: 20px;
         margin-bottom: 0;
 
+        @include breakpoint(max-width 770px) {
+          font-size: 16px;
+        }
+
         b {
           padding-left: 6px;
           font-family: $ProximaNovaBold;
@@ -100,6 +104,11 @@
         text-align: justify;
         font-size: 18px;
         color: #aba266;
+
+        @include breakpoint(max-width 770px) {
+          font-size: 16px;
+        }
+
       }
 
       .text {
@@ -118,6 +127,11 @@
         overflow: hidden;
         text-overflow: ellipsis;
 
+        @include breakpoint(max-width 770px) {
+          height: calc(14px * 1.2 * 4);
+          -webkit-line-clamp: 4;
+        }
+
         > p {
           display: block;
           //display: -webkit-box;
@@ -132,6 +146,10 @@
           @include breakpoint(max-width 1025px) {
             margin-bottom: 40px;
           }
+
+          @include breakpoint(max-width 770px) {
+            font-size: 14px;
+          }
         }
       }
 
@@ -144,6 +162,13 @@
         background-color: #fcfaeb;
         text-align: center;
         z-index: 1;
+
+        @include breakpoint(max-width 770px) {
+          position: relative;
+          float: left;
+          right: 0;
+          bottom: 0;
+        }
 
         span {
           background-image: url('../img/icons/more-post-bg-icon.png');

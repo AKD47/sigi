@@ -4,6 +4,41 @@
   width: 100%;
   background-color: #101211;
 
+  .logo {
+    position: absolute;
+    float: left;
+    width: calc(100% + 150px);
+    width: -moz-calc(100% + 150px);
+    left: -75px;
+    height: 140px;
+    overflow: hidden;
+    margin-top: 13px;
+
+    @include breakpoint(max-width 1024px) {
+      width: 100%;
+      left: 0;
+    }
+
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+      left: 0;
+    }
+
+    @include breakpoint(max-width 670px) {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: auto;
+      margin-top: 0;
+      left: 0;
+    }
+
+    img, svg {
+      size: 100%;
+      object-fit: contain;
+    }
+  }
+
   &__logo {
     @include display-flex(flex);
     @include flex-direction(column);
@@ -11,40 +46,27 @@
     float: left;
     width: 20%;
 
-    @include breakpoint(max-width 660px) {
+    @include breakpoint(max-width 670px) {
       width: 100%;
-    }
-
-    .logo {
-      position: relative;
-      float: left;
-      width: 125px;
-      height: 140px;
-      overflow: hidden;
-      margin-top: 15px;
-
-      @include breakpoint(max-width 660px) {
-        width: 75px;
-        height: 65px;
-        margin-left: 25px;
-      }
-
-      img, svg {
-        size: 100%;
-        object-fit: contain;
-      }
+      padding-left: 30px;
+      @include box-sizing(border-box);
     }
 
     &--title {
       position: relative;
       float: left;
       width: 100%;
-      margin-top: 20px;
+      margin-top: 177px;
       margin-bottom: 0;
       color: #d6b780;
-      font-size: 18px;
+      font-size: 16px;
       font-family: $ProximaNovaBold;
       text-transform: uppercase;
+
+      @include breakpoint(max-width 670px){
+        margin-top: 0;
+      }
+
     }
 
     &--address {
@@ -53,7 +75,7 @@
       width: 100%;
       margin: 0;
       color: #d6b780;
-      font-size: 18px;
+      font-size: 16px;
       font-family: $ProximaNovaRegular;
       text-transform: uppercase;
     }
@@ -64,7 +86,7 @@
       width: 100%;
       margin: 0;
       color: #d6b780;
-      font-size: 18px;
+      font-size: 16px;
       font-family: $ProximaNovaRegular;
       text-transform: uppercase;
 
@@ -72,7 +94,7 @@
         margin-top: 30px;
         margin-bottom: 50px;
 
-        @include breakpoint(max-width 660px) {
+        @include breakpoint(max-width 670px) {
           margin-top: 10px;
           margin-bottom: 10px;
         }
@@ -90,8 +112,8 @@
     padding-left: 30px;
     @include box-sizing(border-box);
 
-    @include breakpoint(max-width 660px) {
-     width: 100%;
+    @include breakpoint(max-width 670px) {
+      width: 100%;
     }
 
     &--title {
@@ -101,12 +123,13 @@
       margin-top: 50px;
       margin-bottom: 22px;
       text-align: left;
-      color: #fffef6;
+      color: #000;
       font-size: 18px;
       font-family: $ProximaNovaBold;
       text-transform: uppercase;
 
-      @include breakpoint(max-width 660px) {
+      @include breakpoint(max-width 670px) {
+        color: #fff;
         margin-top: 20px;
         margin-bottom: 20px;
       }
@@ -165,12 +188,13 @@
       margin-top: 50px;
       margin-bottom: 22px;
       text-align: left;
-      color: #fffef6;
+      color: #000;
       font-size: 18px;
       font-family: $ProximaNovaBold;
       text-transform: uppercase;
 
-      @include breakpoint(max-width 660px) {
+      @include breakpoint(max-width 670px) {
+        color: #fff;
         margin-top: 20px;
         margin-bottom: 20px;
       }
@@ -198,7 +222,7 @@
     @include justify-content(flex-end);
     position: relative;
     float: left;
-    width: calc(100% - (20% + (25%*2 + 196px)));
+    width: calc(100% - (20% + (25% * 2 + 196px)));
     margin-top: 43px;
 
     @include breakpoint(max-width 1024px) {
@@ -208,8 +232,8 @@
       margin-bottom: 20px;
     }
 
-    @include breakpoint(max-width 660px) {
-     width: 100%;
+    @include breakpoint(max-width 670px) {
+      width: 100%;
       @include justify-content(center);
       margin-top: 20px;
     }
@@ -225,12 +249,12 @@
       margin: 0 5px;
       overflow: hidden;
       border-radius: 50%;
-      background-color: #fffef6;
-      box-shadow: 0px 0px 0px 1px #fffef6 inset;
+      background-color: #000;
+      box-shadow: 0px 0px 0px 1px transparent inset;
 
       .fa {
         color: #a1865a;
-        font-size: 22px;
+        font-size: 18px;
       }
 
     }
@@ -238,12 +262,12 @@
     a:hover {
 
       .fa {
-        color: #000;
+        color: #fff;
       }
 
     }
   }
-  
+
   &__art {
     position: absolute;
     bottom: 53px;
@@ -262,7 +286,7 @@
       margin-bottom: 20px;
     }
 
-    @include breakpoint(max-width 660px) {
+    @include breakpoint(max-width 670px) {
       position: relative;
       float: left;
       right: inherit;
