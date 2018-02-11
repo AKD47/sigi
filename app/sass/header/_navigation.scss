@@ -2,14 +2,16 @@
 
   &__navigation {
     position: relative;
-    float: left;
-    width: calc(100% - 125px);
-    width: -moz-calc(100% - 125px);
-    //background-color: #a1865a;
-    margin-top: 44px;
+    float: right;
+    width: calc(100% - 196px);
+    width: -moz-calc(100% - 196px);
+    margin-top: 27px;
+    z-index: 3;
 
-    @include breakpoint(max-width 990px) {
-      margin-top: 15px;
+    @include breakpoint(max-width 770px) {
+      width: calc(100% - 125px);
+      width: -moz-calc(100% - 125px);
+      margin-top: 24px;
     }
 
     @include breakpoint(max-width 700px) {
@@ -30,7 +32,7 @@
     width: 100%;
     list-style: none;
     margin: 0;
-    padding-left: 120px;
+    padding-left: 0;
     padding-right: 70px;
     @include box-sizing(border-box);
 
@@ -77,6 +79,10 @@
           color: #fff;
         }
 
+        @include breakpoint(max-width 770px) {
+          font-size: 14px;
+        }
+
         @include breakpoint(max-width 700px) {
           width: 100%;
           color: #050c08;
@@ -105,7 +111,7 @@
     width: 100%;
     list-style: none;
     margin: 0;
-    padding-left: 156px;
+    padding-left: 38px;
     @include box-sizing(border-box);
 
     @include breakpoint(max-width 1024px) {
@@ -123,8 +129,8 @@
       position: relative;
       float: left;
 
-      @include breakpoint(max-width 990px) {
-        flex: 1;
+      @include breakpoint(max-width 770px) {
+        flex: 3;
       }
 
       @include breakpoint(max-width 700px) {
@@ -168,6 +174,7 @@
           margin-left: 5px;
           margin-right: 5px;
           margin-top: 3px;
+
           @include breakpoint(max-width 700px) {
             width: auto;
           }
@@ -186,13 +193,16 @@
         color: #fffef6;
         font-size: 16px;
 
-        @include breakpoint(max-width 1024px) {
+        @include breakpoint(max-width 770px) {
           width: 100%;
+          font-size: 12px;
+          margin-top: 0;
         }
 
         @include breakpoint(max-width 700px) {
-          margin-left: 0;
           width: 100%;
+          font-size: 16px;
+          margin-top: 10px;
         }
 
 
