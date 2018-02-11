@@ -36,7 +36,7 @@ get_header(); ?>
     </section>
 
     <section class="person__others">
-        <div class="features__bg"><img src="<?php bloginfo('template_directory'); ?>/img/trner-bg.png"></div>
+        <div class="features__bg"><img src="<?php bloginfo('template_directory'); ?>/img/trener-bg.png"></div>
         <div class="container">
             <div class="features__wrapper">
 

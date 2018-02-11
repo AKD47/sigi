@@ -20,7 +20,7 @@
           href="<?php bloginfo('template_directory'); ?>/img/icons/favicon.ico">
     <div class="preloader-wrap js-open">
         <div class="preloader">
-            <img src="<?php bloginfo('template_directory'); ?>/img/icons/top-logo.png" class="c-gif js-gif">
+            <img src="<?php bloginfo('template_directory'); ?>/img/icons/top-logo-sm.png" class="c-gif js-gif">
         </div>
     </div>
 

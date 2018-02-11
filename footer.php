@@ -14,11 +14,11 @@
 
     <div class="container">
 
-        <div class="footer__logo">
+        <div class="logo">
+            <img src="<?php bloginfo('template_directory'); ?>/img/icons/footer-logo.png">
+        </div>
 
-            <div class="logo">
-                <img src="<?php bloginfo('template_directory'); ?>/img/icons/footer-logo.png">
-            </div>
+        <div class="footer__logo">
 
             <p class="footer__logo--title">sigi team s.r.o.</p>
 

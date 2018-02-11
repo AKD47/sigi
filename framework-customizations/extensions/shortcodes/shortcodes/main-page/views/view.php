@@ -75,7 +75,7 @@ $trener = new WP_Query(array(
 <section class="features">
 
     <div class="features__bg">
-        <img src="<?php bloginfo('template_directory'); ?>/img/trner-bg.png">
+        <img src="<?php bloginfo('template_directory'); ?>/img/trener-bg.png">
     </div>
 
     <div class="container">
