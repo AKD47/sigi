@@ -17,14 +17,14 @@
     @include box-sizing(border-box);
     text-align: center;
     border-bottom: 1px solid #4a5b8f;
-    font-family: $ProximaNovaLight;
-    font-size: 22px;
-    color: #4a5b8f;
+    font-size: 28px;
+    font-weight: 300;
+    color: #0041a1;
 
     b {
       padding-left: 6px;
-      font-family: $ProximaNovaBold;
-      color: #938c4e;
+      color: #999525;
+      font-weight: 900;
     }
 
   }
@@ -78,7 +78,7 @@
         float: left;
         width: 100%;
         font-size: 26px;
-        font-family: $ProximaNovaLight;
+        font-weight: 400;
         text-align: justify;
         color: #4a5b8f;
         margin-top: 20px;
@@ -90,7 +90,7 @@
 
         b {
           padding-left: 6px;
-          font-family: $ProximaNovaBold;
+          font-weight: 900;
         }
 
       }
@@ -103,6 +103,7 @@
         margin-bottom: 15px;
         text-align: justify;
         font-size: 18px;
+        font-weight: 400;
         color: #aba266;
 
         @include breakpoint(max-width 770px) {
@@ -120,15 +121,15 @@
         margin-top: 0;
         margin-bottom: 15px;
         text-align: justify;
-        line-height: 1.2;
-        height: calc(16px * 1.2 * 6);
-        -webkit-line-clamp: 6;
+        line-height: 1.4;
+        height: calc(13px * 1.4 * 8);
+        -webkit-line-clamp: 8;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
 
         @include breakpoint(max-width 770px) {
-          height: calc(14px * 1.2 * 4);
+          height: calc(13px * 1.4 * 4);
           -webkit-line-clamp: 4;
         }
 
@@ -140,8 +141,8 @@
           width: 100%;
           margin: 0;
           text-align: justify;
-          font-size: 16px;
-          color: #3e3c3f;
+          font-size: 13px;
+          font-weight: 400;
 
           @include breakpoint(max-width 1025px) {
             margin-bottom: 40px;
@@ -179,7 +180,9 @@
           padding-bottom: 5px;
           padding-left: 22px;
           padding-right: 30px;
-          font-size: 18px;
+          font-size: 13px;
+          font-weight: 900;
+          line-height: 20px;
           font-style: italic;
           color: #fff;
         }

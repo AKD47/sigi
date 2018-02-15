@@ -4,6 +4,24 @@
   width: 100%;
   background-color: #101211;
 
+  .container:before {
+    position: absolute;
+    content: '';
+    height: 25px;
+    width: 18%;
+    top: -19px;
+    left: -2%;
+    background-image: url('../img/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+
+    @include breakpoint(max-width 1330px) {
+      display: none;
+    }
+
+  }
+
   .logo {
     position: absolute;
     float: left;
@@ -13,6 +31,11 @@
     height: 140px;
     overflow: hidden;
     margin-top: 13px;
+
+    @include breakpoint(max-width 1330px) {
+      width: 100%;
+      left: 0;
+    }
 
     @include breakpoint(max-width 1024px) {
       width: 100%;
@@ -58,12 +81,12 @@
       width: 100%;
       margin-top: 177px;
       margin-bottom: 0;
-      color: #d6b780;
-      font-size: 16px;
-      font-family: $ProximaNovaBold;
+      color: #d8ba84;
+      font-weight: 900;
+      font-size: 11px;
       text-transform: uppercase;
 
-      @include breakpoint(max-width 670px){
+      @include breakpoint(max-width 670px) {
         margin-top: 0;
       }
 
@@ -74,9 +97,9 @@
       float: left;
       width: 100%;
       margin: 0;
-      color: #d6b780;
-      font-size: 16px;
-      font-family: $ProximaNovaRegular;
+      color: #d8ba84;
+      font-weight: 900;
+      font-size: 11px;
       text-transform: uppercase;
     }
 
@@ -85,9 +108,9 @@
       float: left;
       width: 100%;
       margin: 0;
-      color: #d6b780;
-      font-size: 16px;
-      font-family: $ProximaNovaRegular;
+      color: #d8ba84;
+      font-weight: 900;
+      font-size: 11px;
       text-transform: uppercase;
 
       &:last-of-type {
@@ -120,13 +143,17 @@
       position: relative;
       float: left;
       width: 100%;
-      margin-top: 50px;
+      margin-top: 47px;
       margin-bottom: 22px;
       text-align: left;
-      color: #000;
-      font-size: 18px;
-      font-family: $ProximaNovaBold;
+      color: black;
+      font-size: 13px;
+      font-weight: 900;
       text-transform: uppercase;
+
+      @include breakpoint(max-width 990px) {
+        margin-top: 60px;
+      }
 
       @include breakpoint(max-width 670px) {
         color: #fff;
@@ -141,6 +168,7 @@
       float: left;
       width: 100%;
       margin: 0;
+      margin-top: 10px;
       padding: 0;
       list-style: none;
 
@@ -150,11 +178,11 @@
           position: relative;
           float: left;
           width: 100%;
-          line-height: 2.0;
+          line-height: 3.0;
           text-align: left;
-          color: #fffef6;
-          font-size: 18px;
-          font-family: $ProximaNovaRegular;
+          color: white;
+          font-size: 13px;
+          font-weight: 400;
           text-transform: uppercase;
         }
 
@@ -177,6 +205,10 @@
     padding-left: 30px;
     @include box-sizing(border-box);
 
+    @include breakpoint(max-width 770px) {
+      width: 25%;
+    }
+
     @include breakpoint(max-width 660px) {
       width: 100%;
     }
@@ -188,10 +220,14 @@
       margin-top: 50px;
       margin-bottom: 22px;
       text-align: left;
-      color: #000;
-      font-size: 18px;
-      font-family: $ProximaNovaBold;
+      color: black;
+      font-size: 13px;
+      font-weight: 900;
       text-transform: uppercase;
+
+      @include breakpoint(max-width 990px) {
+        margin-top: 60px;
+      }
 
       @include breakpoint(max-width 670px) {
         color: #fff;
@@ -272,8 +308,10 @@
     position: absolute;
     bottom: 53px;
     right: 0;
-    color: #fff;
+    color: white;
+    font-size: 11px;
     text-transform: uppercase;
+    font-weight: 900;
 
     @include breakpoint(max-width 990px) {
       position: relative;

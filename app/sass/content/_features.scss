@@ -4,11 +4,12 @@
   width: 100%;
   background-color: #fff;
   margin-top: -8px;
+  margin-bottom: 30px;
 
   &__bg {
     position: absolute;
     width: 100%;
-    top: 147px;
+    top: 166px;
     left: 0;
 
     @include breakpoint(max-width 670px) {
@@ -35,9 +36,9 @@
     @include box-sizing(border-box);
     text-align: center;
     border-bottom: 1px solid #a98c5d;
-    font-family: $ProximaNovaBold;
-    font-size: 22px;
-    color: #a98c5d;
+    color: #b19359;
+    font-size: 28px;
+    font-weight: 900;
   }
 
   &__wrapper {
@@ -70,6 +71,10 @@
         height: 260px;
         overflow: hidden;
 
+        @include breakpoint(max-width 990px) {
+          width: 100%;
+        }
+
         @include breakpoint(max-width 770px) {
           width: 100%;
           height: 155px;
@@ -85,10 +90,10 @@
         position: relative;
         float: left;
         width: 100%;
-        font-size: 26px;
-        font-family: $ProximaNovaLight;
+        color: #b19359;
+        font-size: 24px;
+        font-weight: 400;
         text-align: justify;
-        color: #aba266;
         margin-top: 20px;
         margin-bottom: 20px;
       }
@@ -100,10 +105,10 @@
         float: left;
         width: 100%;
         text-align: justify;
-        font-size: 16px;
-        color: #3e3c3f;
-        line-height: 1.2;
-        height: calc(16px * 1.2 * 6);
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1.6;
+        height: calc(13px * 1.6 * 6);
         -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -114,20 +119,15 @@
 
         > p {
           display: block;
-          display: -webkit-box;
           position: relative;
           float: left;
           width: 100%;
           margin: 0;
           text-align: justify;
-          font-size: 16px;
-          color: #3e3c3f;
-          line-height: 1.2;
-          //height: calc(16px * 1.2 * 6);
-          //-webkit-line-clamp: 6;
-          //-webkit-box-orient: vertical;
-          //overflow: hidden;
-          //text-overflow: ellipsis;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 1.6;
+          height: calc(13px * 1.6 * 6);
 
           @include breakpoint(max-width 1024px) {
             margin-bottom: 40px;
@@ -160,7 +160,9 @@
           padding-bottom: 5px;
           padding-left: 22px;
           padding-right: 30px;
-          font-size: 18px;
+          font-size: 13px;
+          font-weight: 900;
+          line-height: 20px;
           color: #fff;
         }
       }
