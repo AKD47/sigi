@@ -14,6 +14,31 @@ $options = [
         'help' => __('adding a title to a page', '{domain}'),
         'images_only' => true,
     ),
+    'partners' => array(
+        'type' => 'addable-popup',
+        'label' => __('Top banner background partners', '{domain}'),
+        'desc'  => __('adding links', '{domain}'),
+        'template' => '{{- title }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 5, // limit the number of popup`s that can be added
+        'add-button-text' => __('Добавить', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'photo' => array(
+                'type' => 'upload',
+                'label' => __('Photo', '{domain}'),
+                'desc'  => __('Add photo', '{domain}'),
+                'images_only' => true,
+            ),
+            'link' => array(
+                'type' => 'text',
+                'label' => __('link', '{domain}'),
+                'desc'  => __('add link', '{domain}'),
+                'value' => '',
+            ),
+        ),
+    ),
     'top_banner_title' => array(
         'type' => 'text',
         'label' => __('Top banner title', '{domain}'),

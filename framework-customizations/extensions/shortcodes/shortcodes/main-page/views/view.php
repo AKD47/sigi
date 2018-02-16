@@ -18,6 +18,18 @@ $trener = new WP_Query(array(
 
     <div class="container">
 
+        <div class="top-banner__partners">
+
+            <?php foreach ($atts['partners'] as $att) {?>
+
+                <a href="<?= $att['link']?>" class="top-banner__partner">
+                    <img src="<?= $att['photo']['url']?>">
+                </a>
+
+            <? };?>
+
+        </div>
+
         <div class="top-banner__descr">
 
             <h1 class="top-banner__title"><?= $atts['top_banner_title']; ?></h1>

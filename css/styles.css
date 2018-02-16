@@ -774,6 +774,7 @@ a {
   height: 30px;
   overflow: hidden;
   margin-top: 10px;
+  margin-right: 30px;
 }
 
 .top-banner__partner img,
@@ -993,8 +994,8 @@ a {
 
 @media (max-width: 770px) {
   .school__wrapper--item .text {
-    height: 72.8px;
-    -webkit-line-clamp: 4;
+    height: 145.6px;
+    -webkit-line-clamp: 8;
   }
 }
 
@@ -1061,7 +1062,6 @@ a {
   float: left;
   width: 100%;
   background-color: #fff;
-  margin-top: -8px;
   margin-bottom: 30px;
 }
 
@@ -1545,7 +1545,7 @@ a {
   position: relative;
   float: left;
   width: 100%;
-  background-color: #101211;
+  background-color: #000;
 }
 
 .footer .container:before {
