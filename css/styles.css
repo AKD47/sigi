@@ -788,7 +788,7 @@ a {
 .top-banner__descr {
   position: relative;
   float: left;
-  width: 45%;
+  width: 35%;
   margin-left: 68px;
   margin-top: 22%;
   padding-top: 20px;
@@ -811,7 +811,7 @@ a {
   float: left;
   width: 100%;
   font-size: 41px;
-  font-weight: 900;
+  font-weight: 300;
   margin-top: 0;
   margin-bottom: 10px;
   color: #fffef6;
@@ -823,7 +823,7 @@ a {
   margin-left: 10px;
   color: #fffef6;
   text-transform: lowercase;
-  font-weight: 300;
+  font-weight: 900;
 }
 
 .top-banner__subtitle {
@@ -1027,7 +1027,7 @@ a {
   position: absolute;
   right: 0;
   bottom: -10px;
-  padding: 10px;
+  padding: 3px;
   background-color: #fcfaeb;
   text-align: center;
   z-index: 1;
