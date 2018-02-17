@@ -3,8 +3,8 @@ $(document).ready(function(){
     /*mobile menu*/
     $(document).on('click', '#mobile-menu', function (event) {
         event.preventDefault();
-        var menu = $(this).next('.header__nav'),
-            submenu = menu.next('.header__submenu');
+        var menu = $(this).closest('.header__navigation').find('.header__nav'),
+            submenu = $(this).closest('.header__navigation').find('.header__submenu');
         if ($(this).hasClass('js-trigger-active')) {
             $(this).removeClass('js-trigger-active');
             menu.slideUp('slow');
