@@ -10,7 +10,7 @@
     padding-left: 10%;
     @include box-sizing(border-box);
 
-    @include breakpoint(max-width 770px) {
+    @include breakpoint(max-width 990px) {
       width: calc(100% - 125px);
       width: -moz-calc(100% - 125px);
       margin-top: 24px;
@@ -82,7 +82,7 @@
           color: #fff;
         }
 
-        @include breakpoint(max-width 770px) {
+        @include breakpoint(max-width 990px) {
           font-size: 14px;
         }
 
