@@ -32,6 +32,7 @@
 
             <?= wp_nav_menu( array(
                 'theme_location'  => 'footer',//add menu to footer
+                'container'       => false,
                 'menu_class'      => 'footer__element--menu',
             ))?>
 

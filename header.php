@@ -47,36 +47,17 @@
             </a>
 
             <?= wp_nav_menu( array(
-                'theme_location'  => 'top',//add menu to footer
+                'theme_location'  => 'top',//add menu to header
+                'container'       => false,
                 'menu_class'      => 'header__nav',
             ))?>
 
-            <ul class="header__submenu">
-                <li><a href="#">Fotbalove poradenstvi</a></li>
-                <li><a href="#">Fotbalova skola Horsta siegela</a></li>
-                <li>
-                    <a href="https://www.facebook.com/search/top/?q=sigi%20team">
-                        <span>
-                           <i aria-hidden="true" class="fa fa-facebook"></i>
-                        </span>
-                    </a>
-<!--                    <a href="#">-->
-<!--                        <span>-->
-<!--                             <i aria-hidden="true" class="fa fa-instagram"></i>-->
-<!--                        </span>-->
-<!--                    </a>-->
-<!--                    <a href="#">-->
-<!--                        <span>-->
-<!--                           <i aria-hidden="true" class="fa fa-twitter"></i>-->
-<!--                        </span>-->
-<!--                    </a>-->
-                    <a href="#">
-                        <span>
-                           <i aria-hidden="true" class="fa fa-youtube"></i>
-                        </span>
-                    </a>
-                </li>
-            </ul>
+            <?= wp_nav_menu( array(
+                'theme_location'  => 'top_submenu',//add sub-menu to header
+                'container'       => false,
+                'menu_class'      => 'header__submenu',
+            ))?>
+
         </nav>
     </div>
 </header>
