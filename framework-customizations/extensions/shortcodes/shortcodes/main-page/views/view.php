@@ -4,7 +4,7 @@
 /*variable for news category*/
 $news = new WP_Query(array(
     'category_name' => 'news',
-    'posts_per_page' => 4
+    'posts_per_page' => 4,
 ));
 
 /*variable for trener category*/
@@ -51,10 +51,9 @@ $trener = new WP_Query(array(
         <div class="school__wrapper">
 
             <!--loop-->
-            <?php if ($news->have_posts()) : query_posts('cat=2')?> <!--adding to "if" category_ID-->
+            <?php if ($news->have_posts()) : query_posts('cat="news"')?> <!--adding to "if" category_ID-->
 
-                <?php while (have_posts()) :
-                    the_post(); ?>
+                <?php while ($news->have_posts()) : $news->the_post(); ?>
 
                     <div class="school__wrapper--item">
                         <div class="photo">
@@ -97,10 +96,9 @@ $trener = new WP_Query(array(
         <div class="features__wrapper">
 
             <!--loop-->
-            <?php if ($trener->have_posts()) : query_posts('cat=3'); ?> <!--adding to "if" category_ID-->
+            <?php if ($trener->have_posts()) : query_posts('cat="trener"'); ?> <!--adding to "if" category_ID-->
 
-                <?php while (have_posts()) :
-                    the_post(); ?>
+                <?php while ($trener->have_posts()) : $trener->the_post(); ?>
 
                     <div class="features__wrapper--item">
                         <div class="photo">
