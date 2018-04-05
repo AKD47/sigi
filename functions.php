@@ -121,12 +121,12 @@ add_action( 'after_setup_theme', 'sibi_team_content_width', 0 );
 function sibi_team_scripts() {
 	//css
 	wp_enqueue_style( 'sigi-fontsaversome-style', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
-	wp_enqueue_style( 'sigi-libs-style', get_template_directory_uri() . '/css/libs.min.css' );
-	wp_enqueue_style( 'sigi-main-style', get_template_directory_uri() . '/css/styles.css' );
+	wp_enqueue_style( 'sigi-libs-style', get_template_directory_uri() . '/assets/css/libs.min.css' );
+	wp_enqueue_style( 'sigi-main-style', get_template_directory_uri() . '/assets/css/styles.css' );
 	//js
-	wp_enqueue_script( 'sigi-jquary-script', get_template_directory_uri() . '/js/jquery-2.1.3.min.js', [], '', true );
-	wp_enqueue_script( 'sigi-slick', get_template_directory_uri() . '/js/slick.js', [], '', true );
-	wp_enqueue_script( 'sigi-script', get_template_directory_uri() . '/js/script.js', [], '', true );
+	wp_enqueue_script( 'sigi-jquary-script', get_template_directory_uri() . '/assets/js/jquery-2.1.3.min.js', [], '', true );
+	wp_enqueue_script( 'sigi-slick', get_template_directory_uri() . '/assets/js/slick.js', [], '', true );
+	wp_enqueue_script( 'sigi-script', get_template_directory_uri() . '/assets/js/script.js', [], '', true );
 
 	wp_localize_script( 'sigi-script', 'myajax',
 		[

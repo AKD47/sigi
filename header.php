@@ -18,10 +18,10 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" type="image/png" sizes="16x16"
-          href="<?php bloginfo('template_directory'); ?>/img/icons/favicon.ico">
+          href="<?php bloginfo('template_directory'); ?>/assets/img/icons/favicon.ico">
     <div class="preloader-wrap js-open">
         <div class="preloader">
-            <img src="<?php bloginfo('template_directory'); ?>/img/icons/top-logo-sm.png" class="c-gif js-gif">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/icons/top-logo-sm.png" class="c-gif js-gif">
         </div>
     </div>
 
@@ -34,7 +34,7 @@
     <div class="container">
 
         <a href="<?= home_url('/');?>" class="header__logo">
-            <img src="<?php bloginfo('template_directory'); ?>/img/icons/top-logo.png" alt="logo">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/icons/top-logo.png" alt="logo">
         </a>
 
         <div class="header__bg"></div>

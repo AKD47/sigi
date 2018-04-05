@@ -17,7 +17,7 @@ get_header(); ?>
         <div class="container">
             <h1 class="person__title"><?php the_title(); ?></h1>
             <div class="person__photo"> <?php the_post_thumbnail(); ?></div>
-            <div class="person__bg"><img src="<?php bloginfo('template_directory'); ?>/img/person-bg.png"></div>
+            <div class="person__bg"><img src="<?php bloginfo('template_directory'); ?>/assets/img/person-bg.png"></div>
 
             <!--loop of post text-->
             <?php while (have_posts()) : the_post(); ?>
@@ -32,11 +32,11 @@ get_header(); ?>
 
         </div>
 
-        <div class="separator"><img src="<?php bloginfo('template_directory'); ?>/img/separator-bg.png"></div>
+        <div class="separator"><img src="<?php bloginfo('template_directory'); ?>/assets/img/separator-bg.png"></div>
     </section>
 
     <section class="person__others">
-        <div class="features__bg"><img src="<?php bloginfo('template_directory'); ?>/img/trener-bg.png"></div>
+        <div class="features__bg"><img src="<?php bloginfo('template_directory'); ?>/assets/img/trener-bg.png"></div>
         <div class="container">
             <div class="features__wrapper">
 

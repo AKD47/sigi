@@ -34,7 +34,7 @@ get_header(); ?>
             <!--end loop-->
 
         </div>
-        <div class="separator"><img src="<?php bloginfo('template_directory'); ?>/img/separator-bg.png"></div>
+        <div class="separator"><img src="<?php bloginfo('template_directory'); ?>/assets/img/separator-bg.png"></div>
     </section>
 
     <section class="news__others">

@@ -15,7 +15,7 @@
     <div class="container">
 
         <div class="logo">
-            <img src="<?php bloginfo('template_directory'); ?>/img/icons/footer-logo.png">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/icons/footer-logo.png">
         </div>
 
         <div class="footer__logo">
@@ -48,7 +48,7 @@
         <div class="footer__partner">
             <p class="footer__partner--title">Partner</p>
             <a class="footer__partner--partner">
-                <img src="<?php bloginfo('template_directory'); ?>/img/partner-logo.png">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/partner-logo.png">
             </a>
         </div>
         <div class="footer__socials">
