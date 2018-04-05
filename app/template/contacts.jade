@@ -1,0 +1,49 @@
+section.contacts
+
+    .container
+
+        form.contacts__form
+
+            .contacts__left
+
+                label Jméno a příjmení (required)
+
+                input#contacts-form-name.contacts__left--field(
+                type='text'
+                name='name'
+                minlength='2'
+                maxlength='100'
+                placeholder=''
+                required)
+
+                label E-mail (required)
+
+                input#contacts-form-email.contacts__left--field(
+                type='text'
+                name='mail'
+                minlength='5'
+                maxlength='100'
+                placeholder=''
+                required)
+
+                label Předmět
+
+                input#contacts-form-subject.contacts__left--field(
+                type='text'
+                name='subject'
+                minlength='5'
+                maxlength='100'
+                placeholder='')
+
+            .contacts__right
+
+                label Text zprávy
+
+                textarea#contacts-form-message.contacts__right--message(
+                name='message'
+                minlength='2'
+                maxlength='250'
+                required)
+
+            input#contacts-form-submit.contacts__submit(type='submit' value='Odeslat')
+

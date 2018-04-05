@@ -2,11 +2,15 @@
   position: relative;
   float: left;
   width: 100%;
-  height: 160px;
+  height: 225px;
   z-index: 1;
-  background-color: #101211;
+  background-image: url('../img/header-js-bg.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
 
   &.js-head-bg {
+    background-image: none;
     background-color: transparent;
 
     @include breakpoint(max-width 700px) {
@@ -16,6 +20,7 @@
   }
 
   @include breakpoint(max-width 700px) {
+    background-image: none;
     background-color: #101211;
     height: 100%;
   }

@@ -1,0 +1,113 @@
+.contacts {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #f4e9d9;
+  margin-top: -220px;
+  padding-top: 220px;
+
+  &__form {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 52px;
+    padding-left: 128px;
+    padding-right: 128px;
+    @include box-sizing(border-box);
+  }
+
+  &__left {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-right: 34px;
+    @include box-sizing(border-box);
+
+    > label {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 23px;
+      margin-bottom: 7px;
+      text-align: left;
+      color: #101211;
+      font-size: 18px;
+    }
+
+    &--field {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 51px;
+      background-color: #f8f6f2;
+      border: 1px solid #7d6840;
+      padding: 0 20px;
+      @include box-sizing(border-box);
+      color: #101211;
+      font-size: 18px;
+
+      &:focus {
+        background-color: #f2f4fa;
+        border: 1px solid #4a5b8f;
+      }
+    }
+  }
+
+  &__right{
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-left: 34px;
+    @include box-sizing(border-box);
+
+    > label {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 23px;
+      margin-bottom: 7px;
+      text-align: left;
+      color: #101211;
+      font-size: 18px;
+    }
+
+    &--message {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 263px;
+      resize: none;
+      background-color: #f8f6f2;
+      border: 1px solid #7d6840;
+      padding: 10px 20px;
+      @include box-sizing(border-box);
+      color: #101211;
+      font-size: 18px;
+
+      &:focus {
+        background-color: #f2f4fa;
+        border: 1px solid #4a5b8f;
+      }
+    }
+  }
+
+  &__submit {
+    position: relative;
+    float: left;
+    width: 218px;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 90pc;
+    margin-left: calc(50% - (218px/2));
+    margin-left: -moz-calc(50% - (218px/2));
+    background-color: #cf994b;
+    border: none;
+    color: white;
+    font-size: 22px;
+    @include transition(0.4s);
+
+    &:hover{
+      background-color: #48a0cc;
+    }
+  }
+}
