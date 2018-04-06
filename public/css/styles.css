@@ -1794,6 +1794,20 @@ a {
   background-size: contain;
 }
 
+.error {
+  background-color: #f2f4fa;
+  border: 1px solid red;
+  -webkit-box-shadow: 0 0 10px 0 #ff0000;
+  box-shadow: 0 0 10px 0 #ff0000;
+}
+
+.not_error {
+  background-color: #f2f4fa;
+  border: 1px solid #4a5b8f;
+  -webkit-box-shadow: 0 0 10px 0 #4a5b8f;
+  box-shadow: 0 0 10px 0 #4a5b8f;
+}
+
 .footer {
   position: relative;
   float: left;

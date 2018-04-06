@@ -49,6 +49,76 @@ $(document).ready(function(){
         });
     }
     /*close*/
+
+    /*contacts form validation*/
+    $('#contacts-form-name, #contacts-form-email, #contacts-form-subject, #contacts-form-message').unbind().blur(function () {
+
+        var id = $(this).attr('id');
+        var val = $(this).val();
+
+        switch (id) {
+            case 'contacts-form-name':
+                var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_name.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-form-email':
+                var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+                if (val != '' && rv_email.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-form-subject':
+                var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_name.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-form-message':
+                if (val != '' && val.length < 5000) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+        } // end switch(...)
+
+    }); // end blur()
+    $('#contacts-form').submit(function (event) {
+        event.preventDefault();
+        var name = $('#contacts-form-name').val(),
+            mail = $('#contacts-form-email').val(),
+            subject = $('#contacts-form-subject').val(),
+            message = $('#contacts-form-message').val();
+        $.ajax({
+            url: myajax.url,
+            type: "POST",
+            data: {
+                action: 'contact',
+                name: name,
+                mail: mail,
+                subject: subject,
+                message: message
+            },
+            success: function(data){
+                $('#contact-form input:text, textarea').val('').removeClass('error, not_error').text('');
+                // alert(data);
+            }
+        }); // end ajax({...})
+        return false;
+    }); // end submit()
+    /*close*/
 });
 
 $(window).on('load', function() {
