@@ -14,6 +14,10 @@
     padding-left: 128px;
     padding-right: 128px;
     @include box-sizing(border-box);
+
+    @include breakpoint(max-width 1024px) {
+      padding: 0;
+    }
   }
 
   &__left {
@@ -22,6 +26,11 @@
     width: 50%;
     padding-right: 34px;
     @include box-sizing(border-box);
+
+    @include breakpoint(max-width 700px) {
+      padding: 0;
+      width: 100%;
+    }
 
     > label {
       position: relative;
@@ -59,6 +68,11 @@
     width: 50%;
     padding-left: 34px;
     @include box-sizing(border-box);
+
+    @include breakpoint(max-width 700px) {
+      padding: 0;
+      width: 100%;
+    }
 
     > label {
       position: relative;
@@ -108,6 +122,88 @@
 
     &:hover{
       background-color: #48a0cc;
+    }
+
+    @include breakpoint(max-width 700px) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__links {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 75px;
+
+    @include breakpoint(max-width 700px) {
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+
+    > a {
+      position: relative;
+      float: left;
+      color: black;
+      font-size: 22px;
+      @include transition(0.4s);
+
+      &:hover {
+        color: #48a0cc;
+      }
+    }
+
+    &--mail {
+      margin-right: 50px;
+      padding-left: 30px;
+      @include box-sizing(border-box);
+
+      @include breakpoint(max-width 700px) {
+        margin: 0;
+      }
+    }
+
+    &--mail:before{
+      display: block;
+      position: absolute;
+      content: '';
+      top: 9px;
+      left: 0;
+      width: 23px;
+      height: 17px;
+      background-image: url('../img/icons/envelope-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+
+    &--phone {
+      margin-left: 50px;
+      padding-left: 30px;
+      @include box-sizing(border-box);
+
+      @include breakpoint(max-width 700px) {
+        margin: 0;
+      }
+    }
+
+    &--phone:before{
+      display: block;
+      position: absolute;
+      content: '';
+      top: 9px;
+      left: 9px;
+      width: 23px;
+      height: 17px;
+      background-image: url('../img/icons/phone-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
     }
   }
 }
