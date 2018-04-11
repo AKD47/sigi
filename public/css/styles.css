@@ -2027,6 +2027,7 @@ a {
   -webkit-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
   transition: all 0.4s linear;
+  cursor: pointer;
 }
 
 .contacts__submit:hover {
@@ -2105,7 +2106,7 @@ a {
   display: block;
   position: absolute;
   content: '';
-  top: 9px;
+  top: 6px;
   left: 0;
   width: 23px;
   height: 17px;
@@ -2131,7 +2132,7 @@ a {
   display: block;
   position: absolute;
   content: '';
-  top: 9px;
+  top: 6px;
   left: 9px;
   width: 23px;
   height: 17px;

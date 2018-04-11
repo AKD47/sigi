@@ -119,6 +119,7 @@
     color: white;
     font-size: 22px;
     @include transition(0.4s);
+    cursor: pointer;
 
     &:hover{
       background-color: #48a0cc;
@@ -172,7 +173,7 @@
       display: block;
       position: absolute;
       content: '';
-      top: 9px;
+      top: 6px;
       left: 0;
       width: 23px;
       height: 17px;
@@ -196,7 +197,7 @@
       display: block;
       position: absolute;
       content: '';
-      top: 9px;
+      top: 6px;
       left: 9px;
       width: 23px;
       height: 17px;
