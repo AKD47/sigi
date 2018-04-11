@@ -22,9 +22,9 @@
 
             <p class="footer__logo--title">sigi team s.r.o.</p>
 
-            <p class="footer__logo--address">Vyvysen.573 Praha 5 - Lipence 155 31</p>
+            <p class="footer__logo--address"><?= fw_get_db_customizer_option('address');?></p>
             <a href="#" class="footer__logo--call">ICO: 048 92 895</a>
-            <a href="tel:+420 724 360 835" class="footer__logo--call">tel.: +420 724 360 835</a>
+            <a href="tel:<?= fw_get_db_customizer_option('phone_first');?>" class="footer__logo--call">tel.: <?= fw_get_db_customizer_option('phone_first');?></a>
 
         </div>
         <div class="footer__element">
@@ -40,8 +40,8 @@
         <div class="footer__element">
             <p class="footer__element--title">Kontakty</p>
             <ul class="footer__element--menu">
-                <li><a href="#">tel.: +420 724 360 835</a></li>
-                <li><a href="maito:" class="footer__element--email">horst@sigiteam.cz</a></li>
+                <li><a href="tel:<?= fw_get_db_customizer_option('phone_first');?>">tel.: <?= fw_get_db_customizer_option('phone_first');?></a></li>
+                <li><a href="maito:<?= fw_get_db_customizer_option('email');?>" class="footer__element--email"><?= fw_get_db_customizer_option('email');?></a></li>
             </ul>
 
         </div>
@@ -55,12 +55,7 @@
             <a href="https://www.facebook.com/search/top/?q=sigi%20team">
                 <i aria-hidden="true" class="fa fa-facebook"></i>
             </a>
-<!--            <a href="#">-->
-<!--                <i aria-hidden="true" class="fa fa-instagram"></i>-->
-<!--            </a>-->
-<!--            <a href="#">-->
-<!--                <i aria-hidden="true" class="fa fa-twitter"></i>-->
-<!--            </a>-->
+
             <a href="#">
                 <i aria-hidden="true" class="fa fa-youtube"></i>
             </a>
