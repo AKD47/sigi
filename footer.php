@@ -23,7 +23,7 @@
             <p class="footer__logo--title">sigi team s.r.o.</p>
 
             <p class="footer__logo--address"><?= fw_get_db_customizer_option('address');?></p>
-            <a href="#" class="footer__logo--call">ICO: 048 92 895</a>
+            <p class="footer__logo--ico">ICO: 048 92 895</p>
             <a href="tel:<?= fw_get_db_customizer_option('phone_first');?>" class="footer__logo--call">tel.: <?= fw_get_db_customizer_option('phone_first');?></a>
 
         </div>
