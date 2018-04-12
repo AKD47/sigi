@@ -1,0 +1,20 @@
+.camps {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: -220px;
+  padding-top: 220px;
+  background-color: #fff;
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 28px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #aba266;
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
