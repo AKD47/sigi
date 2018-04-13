@@ -1,5 +1,26 @@
 $(document).ready(function(){
 
+    /*preloader*/
+    var preloader = {
+        open: function () {
+            $('body').addClass('hidden-overflow');
+            $('.js-open').fadeIn('fast');
+        },
+        close: function () {
+            $('body').removeClass('hidden-overflow');
+            $('.js-open').fadeOut('fast');
+        }
+    };
+
+    preloader.open();
+
+    $(window).on('load', function () {
+        setTimeout(function () {
+            preloader.close();
+        }, 400);
+    });
+    /*close*/
+
     /*mobile menu*/
     $(document).on('click', '#mobile-menu', function (event) {
         event.preventDefault();
@@ -29,48 +50,76 @@ $(document).ready(function(){
     }
     /*close*/
 
-    /*send message modal*/
-    $(document).on('click', '.contacts-modal', function (event) {
+    /*contacts form validation*/
+    $('#contacts-form-name, #contacts-form-email, #contacts-form-subject, #contacts-form-message').unbind().blur(function () {
+
+        var id = $(this).attr('id');
+        var val = $(this).val();
+
+        switch (id) {
+            case 'contacts-form-name':
+                var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_name.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-form-email':
+                var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+                if (val != '' && rv_email.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-form-subject':
+                var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_name.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-form-message':
+                if (val != '' && val.length < 5000) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+        } // end switch(...)
+
+    }); // end blur()
+    $('#contacts-form').submit(function (event) {
         event.preventDefault();
-        $('#overlay').fadeIn(400,
-            function () {
-                $('.modal__contacts').css('display', 'block').animate({opacity: 1}, 200);
-            });
-    });
-    $(document).on('click', '#overlay', function (event) {
-        event.preventDefault();
-        $('.modal__contacts').animate({opacity: 0}, 200,
-            function () {
-                $(this).css('display', 'none');
-                $('#overlay').fadeOut(400);
+        var name = $('#contacts-form-name').val(),
+            mail = $('#contacts-form-email').val(),
+            subject = $('#contacts-form-subject').val(),
+            message = $('#contacts-form-message').val();
+        $.ajax({
+            url: myajax.url,
+            type: "POST",
+            data: {
+                action: 'contact',
+                name: name,
+                mail: mail,
+                subject: subject,
+                message: message
+            },
+            success: function(data){
+                $('#contact-form input:text, textarea').val('').removeClass('error, not_error').text('');
+                // alert(data);
             }
-        );
-    });
+        }); // end ajax({...})
+        return false;
+    }); // end submit()
     /*close*/
 });
-
-//preloader
-;(function ($) {
-
-    var preloader = {
-        open: function () {
-            $('body').addClass('hidden-overflow');
-            $('.js-open').fadeIn('fast');
-        },
-        close: function () {
-            $('body').removeClass('hidden-overflow');
-            $('.js-open').fadeOut('fast');
-        }
-    };
-
-    preloader.open();
-
-    $(window).on('load', function () {
-        setTimeout(function () {
-            preloader.close();
-        }, 400);
-    });
-})(jQuery);
 
 $(window).on('load', function() {
     var mainHead = $('.header'),
