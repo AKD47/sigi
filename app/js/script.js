@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     /*preloader*/
     var preloader = {
@@ -48,6 +48,25 @@ $(document).ready(function(){
             }
         });
     }
+    /*close*/
+
+    /*camp slider*/
+    $('.camps__slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 4000
+    });
+    /*close*/
+
+    /*show hover camp element*/
+    $(document).on('click', '.camps__element > .descr > .descr__more', function (event) {
+        event.preventDefault();
+        var hover_block = $(this).closest('.camps__element').next('.camps__hover-element');
+        console.log (hover_block);
+    });
     /*close*/
 
     /*contacts form validation*/
@@ -111,7 +130,7 @@ $(document).ready(function(){
                 subject: subject,
                 message: message
             },
-            success: function(data){
+            success: function (data) {
                 $('#contact-form input:text, textarea').val('').removeClass('error, not_error').text('');
                 // alert(data);
             }
@@ -121,10 +140,10 @@ $(document).ready(function(){
     /*close*/
 });
 
-$(window).on('load', function() {
+$(window).on('load', function () {
     var mainHead = $('.header'),
         topBanner = $('.top-banner');
-    if ( topBanner.length != 0 ) {
+    if (topBanner.length != 0) {
         mainHead.addClass('js-head-bg');
     } else {
         mainHead.removeClass('js-head-bg');
