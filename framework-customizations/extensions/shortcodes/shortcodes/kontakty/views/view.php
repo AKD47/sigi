@@ -16,15 +16,15 @@
 
             <div class="contacts__left">
 
-                <label>Jméno a příjmení (required)</label>
+                <label><?= $atts['form_name_title']?></label>
 
                 <input id="contacts-form-name" type="text" name="name" minlength="2" maxlength="100" placeholder="" required class="contacts__left--field">
 
-                <label>E-mail (required)</label>
+                <label><?= $atts['form_email_title']?></label>
 
                 <input id="contacts-form-email" type="text" name="mail" minlength="5" maxlength="100" placeholder="" required class="contacts__left--field">
 
-                <label>Předmět</label>
+                <label><?= $atts['form_subject_title']?></label>
 
                 <input id="contacts-form-subject" type="text" name="subject" minlength="5" maxlength="100" placeholder="" class="contacts__left--field">
 
@@ -32,7 +32,7 @@
 
             <div class="contacts__right">
 
-                <label>Text zprávy</label>
+                <label><?= $atts['form_textarea_title']?></label>
 
                 <textarea id="contacts-form-message" name="message" minlength="2" maxlength="250" required class="contacts__right--message"></textarea>
 
