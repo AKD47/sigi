@@ -1,0 +1,83 @@
+section.contacts
+
+    .container
+
+        h1.contacts__title Fotbalová škola Horsta Siegla
+
+        form#contacts-school-form.contacts__form.contacts__form--school
+
+            h3.contacts__form--title Terminy:
+
+            .contacts__left
+
+                label Jméno a příjmení (required)
+
+                input#contacts-school-form-name.contacts__left--field(
+                type='text'
+                name='name'
+                minlength='2'
+                maxlength='100'
+                placeholder=''
+                required)
+
+                label Rodné číslo (required)
+
+                input#contacts-school-form-uid.contacts__left--field(
+                    type='text'
+                    name='uid'
+                    minlength='2'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+                label Jméno a příjmení (required)
+
+                input#contacts-school-form-date.contacts__left--field(
+                    type='text'
+                    name='name'
+                    minlength='2'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+                label Jméno a příjmení (required)
+
+                input#contacts-school-form-date.contacts__left--field(
+                    type='text'
+                    name='name'
+                    minlength='2'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+            .contacts__right
+
+                label Jméno a příjmení (required)
+
+                input#contacts-school-form-date.contacts__left--field(
+                    type='text'
+                    name='name'
+                    minlength='2'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+                label Adresa
+
+                textarea#contacts-form-address.contacts__right--message.contacts__right--scholl-message(
+                    name='address'
+                    minlength='2'
+                    maxlength='250'
+                    required)
+
+                label E-mail (required)
+
+                input#contacts-school-form-email.contacts__left--field(
+                    type='text'
+                    name='email'
+                    minlength='2'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+            input#ccontacts-school-form-submit.contacts__submit(type='submit' value='Odeslat')

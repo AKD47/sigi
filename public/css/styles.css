@@ -1938,6 +1938,19 @@ a {
   }
 }
 
+.contacts__form--title {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.contacts__form--school {
+  margin-top: 0;
+}
+
 .contacts__left {
   position: relative;
   float: left;
@@ -2029,6 +2042,10 @@ a {
 .contacts__right--message:focus {
   background-color: #f2f4fa;
   border: 1px solid #4a5b8f;
+}
+
+.contacts__right--scholl-message {
+  height: 156px;
 }
 
 .contacts__submit {
@@ -2160,6 +2177,18 @@ a {
   background-image: url("../img/icons/phone-icon.png");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.contacts__title {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 28px;
+  margin-bottom: 35px;
+  text-align: center;
+  color: #aba266;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .error {

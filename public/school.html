@@ -36,15 +36,31 @@
         </nav>
       </div>
     </header>
-    <section class="camps">
+    <section class="contacts">
       <div class="container">
-        <h1 class="camps__title">Camps</h1>
-        <div class="camps__wrapper">
-          <div class="camps__element">
-            <div class="photo"><img src="img/camp_1.png" alt="photo"></div>
-            <div class="descr"></div>
+        <h1 class="contacts__title">Fotbalová škola Horsta Siegla</h1>
+        <form id="contacts-school-form" class="contacts__form contacts__form--school">
+          <h3 class="contacts__form--title">Terminy:</h3>
+          <div class="contacts__left">
+            <label>Jméno a příjmení (required)</label>
+            <input id="contacts-school-form-name" type="text" name="name" minlength="2" maxlength="100" placeholder="" required class="contacts__left--field">
+            <label>Rodné číslo (required)</label>
+            <input id="contacts-school-form-uid" type="text" name="uid" minlength="2" maxlength="100" placeholder="" required class="contacts__left--field">
+            <label>Jméno a příjmení (required)</label>
+            <input id="contacts-school-form-date" type="text" name="name" minlength="2" maxlength="100" placeholder="" required class="contacts__left--field">
+            <label>Jméno a příjmení (required)</label>
+            <input id="contacts-school-form-date" type="text" name="name" minlength="2" maxlength="100" placeholder="" required class="contacts__left--field">
           </div>
-        </div>
+          <div class="contacts__right">
+            <label>Jméno a příjmení (required)</label>
+            <input id="contacts-school-form-date" type="text" name="name" minlength="2" maxlength="100" placeholder="" required class="contacts__left--field">
+            <label>Adresa</label>
+            <textarea id="contacts-form-address" name="address" minlength="2" maxlength="250" required class="contacts__right--message contacts__right--scholl-message"></textarea>
+            <label>E-mail (required)</label>
+            <input id="contacts-school-form-email" type="text" name="email" minlength="2" maxlength="100" placeholder="" required class="contacts__left--field">
+          </div>
+          <input id="ccontacts-school-form-submit" type="submit" value="Odeslat" class="contacts__submit">
+        </form>
       </div>
     </section>
     <footer class="footer">
