@@ -137,9 +137,18 @@
         position: absolute;
         right: 9px;
         bottom: 9px;
-        padding: 3px;
+        width: 81px;
+        height: 23px;
         text-align: center;
         z-index: 1;
+        background-image: url('../img/icons/more-post-bg-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size:  100% 100%;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
 
         @include breakpoint(max-width 770px) {
           position: relative;
@@ -148,20 +157,10 @@
           bottom: 0;
           margin-bottom: 9px;
         }
+      }
 
-        span {
-          background-image: url('../img/icons/more-post-bg-icon.png');
-          background-repeat: no-repeat;
-          -webkit-background-size: 100% 100%;
-          background-size:  100% 100%;
-          padding-top: 3px;
-          padding-bottom: 5px;
-          padding-left: 22px;
-          padding-right: 30px;
-          color: white;
-          font-size: 14px;
-          font-weight: 700;
-        }
+      .descr__more:hover {
+        background-image: url('../img/icons/more-gold-post-bg-icon.png');
       }
     }
 
@@ -171,7 +170,7 @@
   }
 
   &__hover-element {
-    display: none;
+    display: block;
     position: relative;
     float: left;
     width: 100%;
@@ -202,12 +201,21 @@
 
       .descr__more {
         display: block;
-        position: absolute;
-        right: 9px;
-        bottom: 9px;
-        padding: 3px;
+        position: relative;
+        float: left;
+        width: 133px;
+        height: 38px;
+        margin-bottom: 38px;
+        background-image: url('../img/icons/more-post-bg-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size:  100% 100%;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
         text-align: center;
-        z-index: 1;
+        line-height: 38px;
+
 
         @include breakpoint(max-width 770px) {
           position: relative;
@@ -216,20 +224,10 @@
           bottom: 0;
           margin-bottom: 9px;
         }
+      }
 
-        span {
-          background-image: url('../img/icons/more-post-bg-icon.png');
-          background-repeat: no-repeat;
-          -webkit-background-size: 100% 100%;
-          background-size:  100% 100%;
-          padding-top: 3px;
-          padding-bottom: 5px;
-          padding-left: 22px;
-          padding-right: 30px;
-          color: white;
-          font-size: 14px;
-          font-weight: 700;
-        }
+      .descr__more:hover {
+        background-image: url('../img/icons/more-gold-post-bg-icon.png');
       }
     }
   }
@@ -272,6 +270,10 @@
       background-repeat: no-repeat;
       -webkit-background-size: contain;
       background-size: contain;
+
+      &:hover {
+        background-image: url('../img/icons/arr-left-hover-icon.png');
+      }
     }
 
     .slick-next {
@@ -279,6 +281,10 @@
       background-repeat: no-repeat;
       -webkit-background-size: contain;
       background-size: contain;
+
+      &:hover {
+        background-image: url('../img/icons/arr-right-hover-icon.png');
+      }
     }
   }
 }
