@@ -62,19 +62,20 @@ $(document).ready(function () {
     /*close*/
 
     /*show hover camp element*/
-    // $(document).on('click', '.camps__element > .descr > .descr__more', function (event) {
-    //     event.preventDefault();
-    //     var hover_block = $(this).closest('.camps__element').next('.camps__hover-element');
-    //     if ($(this).hasClass('js-show-hover-block')) {
-    //         $(this).removeClass('js-show-hover-block').text('vice');
-    //         hover_block.removeClass('js-show-block').slideUp(400);
-    //     } else {
-    //         $('.camps__element > .descr > .descr__more').removeClass('js-show-hover-block');
-    //         $('.camps__hover-element').removeClass('js-show-block').slideUp(400);
-    //         $(this).addClass('js-show-hover-block').text('zavřít');
-    //         hover_block.addClass('js-show-block').slideDown(400);
-    //     }
-    // });
+    $(document).on('click', '.camps__element > .descr > .descr__more', function (event) {
+        event.preventDefault();
+        var hover_block = $(this).closest('.camps__element').next('.camps__hover-element');
+        if ($(this).hasClass('js-show-hover-block')) {
+            $(this).removeClass('js-show-hover-block').text('vice');
+            hover_block.removeClass('js-show-block').slideUp(400);
+        } else {
+            $('.camps__element > .descr > .descr__more').removeClass('js-show-hover-block').text('vice');
+            $('.camps__hover-element').removeClass('js-show-block').slideUp(400);
+            $(this).addClass('js-show-hover-block').text('zavřít');
+            hover_block.addClass('js-show-block').slideDown(400);
+            $('.camps__slider').slick('refresh');
+        }
+    });
     /*close*/
 
     /*contacts form validation*/

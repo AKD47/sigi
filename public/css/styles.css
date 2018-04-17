@@ -2087,16 +2087,20 @@ a {
 }
 
 .camps__hover-element {
-  display: block;
+  display: none;
   position: relative;
   float: left;
   width: 100%;
   margin-top: -30px;
+  margin-bottom: 18px;
   border: 1px solid #e3bb82;
   padding-left: 35px;
   padding-right: 35px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  background-image: url("../img/hover-block-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .camps__hover-element > .descr {
@@ -2124,9 +2128,12 @@ a {
   display: block;
   position: relative;
   float: left;
-  width: 133px;
+  width: 132px;
   height: 38px;
   margin-bottom: 38px;
+  margin-left: -webkit-calc(50% - 66px);
+  margin-left: calc(50% - 66px);
+  margin-left: -moz-calc(50% - 66px);
   background-image: url("../img/icons/more-post-bg-icon.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -2177,6 +2184,36 @@ a {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.camps__slider--slide > .hover {
+  display: none;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(72, 160, 204, 0.62);
+}
+
+.camps__slider--slide > .hover > span {
+  display: block;
+  position: absolute;
+  width: 41px;
+  height: 27px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url("../img/icons/eye-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.camps__slider--slide:hover > .hover {
+  display: block;
 }
 
 .camps__slider .slick-arrow {

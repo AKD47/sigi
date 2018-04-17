@@ -8,9 +8,15 @@ section.contacts
 
             h3.contacts__form--title Terminy:
 
+            .contacts__dates
+                p 2.7. – 6. 7. 2018
+                p 3.7. – 13. 7. 2018
+                p 4.7. – 20. 7. 2018
+                p 5.7. – 27. 7. 2018
+
             .contacts__left
 
-                label Jméno a příjmení (required)
+                label Jméno a příjmení
 
                 input#contacts-school-form-name.contacts__left--field(
                 type='text'
@@ -20,7 +26,7 @@ section.contacts
                 placeholder=''
                 required)
 
-                label Rodné číslo (required)
+                label Rodné číslo
 
                 input#contacts-school-form-uid.contacts__left--field(
                     type='text'
@@ -30,21 +36,21 @@ section.contacts
                     placeholder=''
                     required)
 
-                label Jméno a příjmení (required)
+                label Zvolený termín
 
                 input#contacts-school-form-date.contacts__left--field(
                     type='text'
-                    name='name'
+                    name='date'
                     minlength='2'
                     maxlength='100'
                     placeholder=''
                     required)
 
-                label Jméno a příjmení (required)
+                label Klubová příslušnost (pokud nějakou má)
 
-                input#contacts-school-form-date.contacts__left--field(
+                input#contacts-school-form-member.contacts__left--field(
                     type='text'
-                    name='name'
+                    name='member'
                     minlength='2'
                     maxlength='100'
                     placeholder=''
@@ -52,12 +58,12 @@ section.contacts
 
             .contacts__right
 
-                label Jméno a příjmení (required)
+                label Telefonní kontakt na rodiče
 
-                input#contacts-school-form-date.contacts__left--field(
+                input#contacts-school-form-phone.contacts__left--field(
                     type='text'
-                    name='name'
-                    minlength='2'
+                    name='phone'
+                    minlength='8'
                     maxlength='100'
                     placeholder=''
                     required)
@@ -70,7 +76,7 @@ section.contacts
                     maxlength='250'
                     required)
 
-                label E-mail (required)
+                label E-mail
 
                 input#contacts-school-form-email.contacts__left--field(
                     type='text'
