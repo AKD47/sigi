@@ -147,6 +147,109 @@ $(document).ready(function () {
         return false;
     }); // end submit()
     /*close*/
+
+    /*school form validation*/
+    $('#contacts-school-form-name, #contacts-school-form-uid, #contacts-school-form-date, #contacts-school-form-member, #contacts-school-form-phone, #contacts-school-form-address, #contacts-school-form-email').unbind().blur(function () {
+
+        var id = $(this).attr('id');
+        var val = $(this).val();
+
+        switch (id) {
+            case 'contacts-school-form-name':
+                var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_name.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-school-form-uid':
+                var rv_uid = /^([0-9_-])+/;
+                if (val != '' && rv_uid.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-school-form-date':
+                var rv_date = /^([0-9_-])+/;
+                if (val.length > 2 && val != '' && rv_date.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-school-form-member':
+                var rv_memeber = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_memeber.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-school-form-phone':
+                var rv_phone = /^([0-9_-])+/;
+                if (val != '' && rv_phone.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-school-form-address':
+                var rv_address =  /^[a-zA-Z0-9_.-]/;
+                if (val.length > 2 && val != '' && rv_address.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-school-form-email':
+                var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+                if (val != '' && rv_email.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+        } // end switch(...)
+
+    }); // end blur()
+    $('#contacts-school-form').submit(function (event) {
+        event.preventDefault();
+        var name = $('#contacts-school-form-name').val(),
+            uid = $('#contacts-school-form-uid').val(),
+            date = $('#contacts-school-form-date').val(),
+            member = $('#contacts-school-form-member').val(),
+            phone = $('#contacts-school-form-phone').val(),
+            address = $('#contacts-school-form-address').val(),
+            mail = $('#contacts-form-email').val();
+        $.ajax({
+            url: myajax.url,
+            type: "POST",
+            data: {
+                action: 'school_form',
+                name: name,
+                uid: uid,
+                date: date,
+                member: member,
+                phone: phone,
+                address: address,
+                mail: mail
+            },
+            success: function (data) {
+                $('#contacts-school-form input:text, textarea').val('').removeClass('error, not_error').text('');
+                // alert(data);
+            }
+        }); // end ajax({...})
+        return false;
+    }); // end submit()
+    /*close*/
 });
 
 $(window).on('load', function () {

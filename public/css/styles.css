@@ -2525,6 +2525,65 @@ a {
   font-weight: 700;
 }
 
+.contacts__dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  float: left;
+  width: 100%;
+  border: 1px solid #aba266;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 700px) {
+  .contacts__dates {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__dates > p {
+  position: relative;
+  float: left;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0%;
+  flex: 1 0 0%;
+  text-align: center;
+  margin: 0;
+  padding: 16px 0;
+  color: #101211;
+  font-size: 18px;
+  font-weight: 400;
+  border-right: 1px solid #aba266;
+}
+
+@media (max-width: 700px) {
+  .contacts__dates > p {
+    border-right: none;
+    border-bottom: 1px solid #aba266;
+  }
+}
+
+.contacts__dates > p:last-of-type {
+  border-right: none;
+}
+
+@media (max-width: 700px) {
+  .contacts__dates > p:last-of-type {
+    border-bottom: none;
+  }
+}
+
 .error {
   background-color: #f2f4fa;
   border: 1px solid red;
