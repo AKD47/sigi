@@ -1,5 +1,6 @@
 html{
     width: 100%;
+    margin: 0;
 }
 body{
     width: 100%;
@@ -8,7 +9,7 @@ body{
     border: 0;
     font-weight: inherit;
     font-style: inherit;
-    font-family: $ProximaNovaRegular;
+    font-family: 'Lato', sans-serif;
     text-align: left;
     vertical-align: baseline;
 }

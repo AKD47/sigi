@@ -51,7 +51,9 @@
         size: 100%;
         object-fit: cover;
       }
+
     }
+
   }
 
   &__descr {
@@ -71,7 +73,7 @@
       position: relative;
       float: left;
       width: 100%;
-      text-align: center;
+      text-align: justify;
       color: #000;
       font-size: 16px;
       margin-top: 10px;
@@ -92,6 +94,11 @@
     width: 100%;
     margin-top: 50px;
     background-color: #fff;
+
+    .school__wrapper--item .more {
+      background-color: #fff;
+    }
+
   }
 
 }

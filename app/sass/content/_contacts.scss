@@ -1,0 +1,293 @@
+.contacts {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #f4e9d9;
+  margin-top: -220px;
+  padding-top: 220px;
+
+  &__form {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 52px;
+    padding-left: 128px;
+    padding-right: 128px;
+    @include box-sizing(border-box);
+
+    @include breakpoint(max-width 1024px) {
+      padding: 0;
+    }
+
+    &--title {
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    &--school {
+      margin-top: 0;
+    }
+  }
+
+  &__left {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-right: 34px;
+    @include box-sizing(border-box);
+
+    @include breakpoint(max-width 700px) {
+      padding: 0;
+      width: 100%;
+    }
+
+    > label {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 23px;
+      margin-bottom: 7px;
+      text-align: left;
+      color: #101211;
+      font-size: 18px;
+    }
+
+    &--field {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 51px;
+      background-color: #f8f6f2;
+      border: 1px solid #7d6840;
+      padding: 0 20px;
+      @include box-sizing(border-box);
+      color: #101211;
+      font-size: 18px;
+
+      &:focus {
+        background-color: #f2f4fa;
+        border: 1px solid #4a5b8f;
+      }
+    }
+  }
+
+  &__right{
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-left: 34px;
+    @include box-sizing(border-box);
+
+    @include breakpoint(max-width 700px) {
+      padding: 0;
+      width: 100%;
+    }
+
+    > label {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 23px;
+      margin-bottom: 7px;
+      text-align: left;
+      color: #101211;
+      font-size: 18px;
+    }
+
+    &--message {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 263px;
+      resize: none;
+      background-color: #f8f6f2;
+      border: 1px solid #7d6840;
+      padding: 10px 20px;
+      @include box-sizing(border-box);
+      color: #101211;
+      font-size: 18px;
+
+      &:focus {
+        background-color: #f2f4fa;
+        border: 1px solid #4a5b8f;
+      }
+    }
+
+    &--scholl-message {
+      height: 156px;
+    }
+  }
+
+  &__submit {
+    position: relative;
+    float: left;
+    width: 218px;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 90px;
+    margin-left: calc(50% - (218px/2));
+    margin-left: -moz-calc(50% - (218px/2));
+    background-color: #cf994b;
+    border: none;
+    color: white;
+    font-size: 22px;
+    @include transition(0.4s);
+    cursor: pointer;
+
+    &:hover{
+      background-color: #48a0cc;
+    }
+
+    @include breakpoint(max-width 700px) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__links {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 75px;
+
+    @include breakpoint(max-width 700px) {
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+
+    > a {
+      position: relative;
+      float: left;
+      color: black;
+      font-size: 22px;
+      @include transition(0.4s);
+
+      &:hover {
+        color: #48a0cc;
+      }
+    }
+
+    &--mail {
+      margin-right: 50px;
+      padding-left: 30px;
+      @include box-sizing(border-box);
+
+      @include breakpoint(max-width 700px) {
+        margin: 0;
+      }
+    }
+
+    &--mail:before{
+      display: block;
+      position: absolute;
+      content: '';
+      top: 6px;
+      left: 0;
+      width: 23px;
+      height: 17px;
+      background-image: url('../img/icons/envelope-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+
+    &--phone {
+      margin-left: 50px;
+      padding-left: 30px;
+      @include box-sizing(border-box);
+
+      @include breakpoint(max-width 700px) {
+        margin: 0;
+      }
+    }
+
+    &--phone:before{
+      display: block;
+      position: absolute;
+      content: '';
+      top: 6px;
+      left: 9px;
+      width: 23px;
+      height: 17px;
+      background-image: url('../img/icons/phone-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 28px;
+    margin-bottom: 35px;
+    text-align: center;
+    color: #aba266;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__dates {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    position: relative;
+    float: left;
+    width: 100%;
+    border: 1px solid #aba266;
+    margin-bottom: 60px;
+
+    @include breakpoint(max-width 700px) {
+      @include flex-direction(column);
+      margin-bottom: 10px;
+    }
+
+    > p{
+      position: relative;
+      float: left;
+      flex: 1 0 0;
+      text-align: center;
+      margin: 0;
+      padding: 16px 0;
+      color: #101211;
+      font-size: 18px;
+      font-weight: 400;
+      border-right: 1px solid #aba266;
+
+      @include breakpoint(max-width 700px) {
+        border-right: none;
+        border-bottom: 1px solid #aba266;
+      }
+
+      &:last-of-type {
+        border-right: none;
+
+        @include breakpoint(max-width 700px) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+.error {
+  background-color: #f2f4fa;
+  border: 1px solid red;
+  box-shadow: 0 0 10px 0 #ff0000;
+}
+
+.not_error {
+  background-color: #f2f4fa;
+  border: 1px solid #4a5b8f;
+  box-shadow: 0 0 10px 0 #4a5b8f;
+}

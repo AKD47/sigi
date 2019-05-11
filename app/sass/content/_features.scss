@@ -3,16 +3,17 @@
   float: left;
   width: 100%;
   background-color: #fff;
-  margin-top: -5px;
+  //margin-top: -8px;
+  margin-bottom: 30px;
 
-  &__bg{
+  &__bg {
     position: absolute;
     width: 100%;
-    top: 22%;
+    top: 166px;
     left: 0;
 
-    @include breakpoint(max-width 660px) {
-     display: none;
+    @include breakpoint(max-width 670px) {
+      display: none;
     }
 
     img, svg {
@@ -35,9 +36,9 @@
     @include box-sizing(border-box);
     text-align: center;
     border-bottom: 1px solid #a98c5d;
-    font-family: $ProximaNovaBold;
-    font-size: 22px;
-    color: #a98c5d;
+    color: #b19359;
+    font-size: 28px;
+    font-weight: 900;
   }
 
   &__wrapper {
@@ -57,18 +58,27 @@
       width: calc(30% - 25px);
       width: -moz-calc(30% - 25px);
 
-      @include breakpoint(max-width 660px) {
+      @include breakpoint(max-width 670px) {
         width: calc(100% - 10px);
         width: -moz-calc(100% - 10px);
         margin-bottom: 50px;
       }
 
-      .photo{
+      .photo {
         position: relative;
         float: left;
         width: 228px;
         height: 260px;
         overflow: hidden;
+
+        @include breakpoint(max-width 990px) {
+          width: 100%;
+        }
+
+        @include breakpoint(max-width 770px) {
+          width: 100%;
+          height: 155px;
+        }
 
         img, svg {
           size: 100%;
@@ -76,77 +86,86 @@
         }
       }
 
-      .title{
+      .title {
         position: relative;
         float: left;
         width: 100%;
-        font-size: 26px;
-        font-family: $ProximaNovaLight;
+        color: #b19359;
+        font-size: 24px;
+        font-weight: 400;
         text-align: justify;
-        color: #aba266;
         margin-top: 20px;
         margin-bottom: 20px;
       }
 
-      .text{
+      .text {
         display: block;
         display: -webkit-box;
         position: relative;
         float: left;
         width: 100%;
-        margin-top: 0;
-        margin-bottom: 15px;
         text-align: justify;
-        font-size: 16px;
-        color: #3e3c3f;
-        line-height: 1.2;
-        height: calc(16px * 1.2 * 8);
-        -webkit-line-clamp: 8;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1.6;
+        height: calc(13px * 1.6 * 6);
+        -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
+        margin-top: 0;
+        margin-bottom: 15px;
 
-        @include breakpoint(max-width 1024px) {
-          margin-bottom: 40px;
-        }
+        > p {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 0;
+          text-align: justify;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 1.6;
+          height: calc(13px * 1.6 * 6);
 
-        @include breakpoint(max-width 660px) {
-          margin-bottom: 30px;
+          @include breakpoint(max-width 1024px) {
+            margin-bottom: 40px;
+          }
+
+          @include breakpoint(max-width 660px) {
+            margin-bottom: 30px;
+          }
+
         }
 
       }
 
-      .more{
+      .more {
         display: block;
         position: absolute;
         left: -9px;
-        bottom: 0;
+        bottom: -35px;
         padding: 10px;
         background-color: #fff;
         text-align: center;
         z-index: 1;
 
         span {
-          background-color: #000;
-          padding: 5px 22px;
-          font-size: 18px;
+          background-image: url('../img/icons/more-trener-bg-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-left: 22px;
+          padding-right: 30px;
+          font-size: 13px;
+          font-weight: 900;
+          line-height: 20px;
           color: #fff;
-
-          &:after {
-            display: block;
-            position: absolute;
-            content: '';
-            right: 0;
-            top: 5px;
-            width: 0;
-            height: 0;
-            border-top: 16px solid transparent;
-            border-left: 11px solid #000;
-            border-bottom: 16px solid transparent;
-          }
         }
       }
-
     }
   }
 }

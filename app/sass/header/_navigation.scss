@@ -2,19 +2,25 @@
 
   &__navigation {
     position: relative;
-    float: left;
-    width: calc(100% - 125px);
-    width: -moz-calc(100% - 125px);
-    background-color: #a1865a;
-    margin-top: 44px;
+    float: right;
+    width: calc(100% - 196px);
+    width: -moz-calc(100% - 196px);
+    margin-top: 27px;
+    z-index: 3;
+    padding-left: 10%;
+    @include box-sizing(border-box);
 
     @include breakpoint(max-width 990px) {
-      margin-top: 15px;
+      width: calc(100% - 125px);
+      width: -moz-calc(100% - 125px);
+      margin-top: 24px;
+      padding-left: 0;
     }
 
-    @include breakpoint(max-width 660px) {
+    @include breakpoint(max-width 700px) {
       width: 100%;
       margin-top: 10px;
+      background-color: rgba(255,255,255,0.6);
     }
 
   }
@@ -29,15 +35,15 @@
     width: 100%;
     list-style: none;
     margin: 0;
-    padding-left: 120px;
+    padding-left: 0;
     padding-right: 70px;
     @include box-sizing(border-box);
 
-    @include breakpoint(max-width 990px) {
+    @include breakpoint(max-width 1024px) {
       padding: 0;
     }
 
-    @include breakpoint(max-width 660px) {
+    @include breakpoint(max-width 700px) {
       padding: 0;
       display: none;
 
@@ -45,7 +51,7 @@
 
     > li {
 
-      @include breakpoint(max-width 660px) {
+      @include breakpoint(max-width 700px) {
         width: 100%;
       }
 
@@ -53,15 +59,45 @@
         position: relative;
         float: left;
         width: 100%;
-        margin: 10px 0;
+        margin-top: 21px;
+        margin-bottom: 10px;
         text-transform: uppercase;
         text-align: center;
-        color: #050c08;
+        color: black;
         font-size: 17px;
-        font-family: $ProximaNovaBold;
+        font-weight: 900;
 
-        @include breakpoint(max-width 660px) {
+        &:after{
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 2px;
+          left: 0;
+          bottom: 0;
+          background-color: #fff;
+          @include transition(0.4s);
+        }
+
+        @include breakpoint (max-width 1024px){
+          color: #fff;
+        }
+
+        @include breakpoint(max-width 990px) {
+          font-size: 14px;
+        }
+
+        @include breakpoint(max-width 700px) {
           width: 100%;
+          color: #050c08;
+        }
+
+      }
+
+      > a:hover{
+
+        &:after{
+          width: 100%;
+          @include transition(0.4s);
         }
 
       }
@@ -78,14 +114,14 @@
     width: 100%;
     list-style: none;
     margin: 0;
-    padding-left: 156px;
+    padding-left: 27px;
     @include box-sizing(border-box);
 
-    @include breakpoint(max-width 990px) {
+    @include breakpoint(max-width 1024px) {
       padding: 0;
     }
 
-    @include breakpoint(max-width 660px) {
+    @include breakpoint(max-width 700px) {
       @include flex-direction(column);
       padding: 0;
       display: none;
@@ -96,22 +132,22 @@
       position: relative;
       float: left;
 
-      @include breakpoint(max-width 990px) {
-        flex: 1;
+      @include breakpoint(max-width 770px) {
+        flex: 3;
       }
 
-      @include breakpoint(max-width 660px) {
+      @include breakpoint(max-width 700px) {
         width: 100%;
       }
 
       &:nth-of-type(2) {
 
         a {
+          width: 100%;
           margin-left: 30px;
 
-          @include breakpoint(max-width 660px) {
+          @include breakpoint(max-width 700px) {
             margin-left: 0;
-            width: 100%;
           }
 
         }
@@ -122,11 +158,11 @@
         @include display-flex(flex);
         @include flex-wrap(wrap);
         @include justify-content(flex-end);
-        flex: 2 0 0;
-        padding-right: 40px;
+        flex: 0 0 0;
+        padding-right: 0;
         @include box-sizing(border-box);
 
-        @include breakpoint(max-width 660px) {
+        @include breakpoint(max-width 700px) {
           @include display-flex(flex);
           @include flex-wrap(wrap);
           @include justify-content(center);
@@ -136,11 +172,13 @@
         }
 
         > a {
+          width: auto;
           padding: 0;
           margin-left: 5px;
           margin-right: 5px;
+          margin-top: 3px;
 
-          @include breakpoint(max-width 660px) {
+          @include breakpoint(max-width 700px) {
             width: auto;
           }
 
@@ -151,33 +189,62 @@
       > a {
         position: relative;
         float: left;
-        //width: 100%;
         margin: 10px 0;
-        //padding-left: 40px;
         @include box-sizing(border-box);
         text-align: center;
         text-transform: uppercase;
-        color: #fffef6;
+        color: white;
         font-size: 16px;
+        font-weight: 500;
 
-        @include breakpoint(max-width 660px) {
-          margin-left: 0;
+        @include breakpoint(max-width 770px) {
           width: 100%;
+          font-size: 12px;
+          margin-top: 0;
+        }
+
+        @include breakpoint(max-width 700px) {
+          width: 100%;
+          font-size: 16px;
+          margin-top: 10px;
         }
 
 
         > span {
+          @include display-flex(flex);
+          @include align-items(center);
+          @include justify-content(center);
           position: relative;
           float: left;
-          width: 30px;
-          height: 30px;
+          width: 31px;
+          height: 31px;
           overflow: hidden;
           border-radius: 50%;
           background-color: #fffef6;
+          box-shadow: 0px 0px 0px 1px #fffef6 inset;
+          
+          .fa {
+            color: #a1865a;
+            font-size: 22px;
+          }
 
           img, svg {
             size: 100%;
             object-fit: contain;
+          }
+
+        }
+
+      }
+
+      > a:hover {
+
+        span {
+          background-color: #a1865a;
+          box-shadow: 0px 0px 0px 1px #fffef6 inset;
+
+          .fa {
+            color: #fff;
           }
 
         }
@@ -201,7 +268,7 @@
     z-index: 15;
     cursor: pointer;
 
-    @include breakpoint(max-width 660px) {
+    @include breakpoint(max-width 700px) {
       display: block;
     }
 
@@ -251,5 +318,4 @@
       }
     }
   }
-
 }

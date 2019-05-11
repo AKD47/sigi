@@ -2,33 +2,70 @@
   position: relative;
   float: left;
   width: 100%;
+  height: 225px;
   z-index: 1;
-  background-color: #101211;
+  background-image: url('../img/header-js-bg.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
 
-  @include breakpoint(max-width 660px) {
+  &.js-head-bg {
+    background-image: none;
+    background-color: transparent;
+
+    @include breakpoint(max-width 700px) {
+      background-color: #101211;
+      height: 100%;
+    }
+  }
+
+  @include breakpoint(max-width 700px) {
+    background-image: none;
     background-color: #101211;
+    height: 100%;
   }
 
   &__logo {
-    position: relative;
-    float: left;
-    width: 125px;
+    position: absolute;
+    width: calc(100% + 150px);
+    width: -moz-calc(100% + 150px);
+    left: -75px;
     height: 140px;
     overflow: hidden;
     margin-top: 15px;
     margin-bottom: 15px;
+    z-index: 2;
 
-    @include breakpoint(max-width 660px) {
-      width: 75px;
-      height: 65px;
-      margin-left: 25px;
+    @include breakpoint(max-width 1330px) {
+      width: 100%;
+      left: 0;
+      margin-top: 14px;
+    }
+
+    @include breakpoint(max-width 1024px) {
+      width: 100%;
+      left: 0;
+      margin-top: 14px;
+    }
+
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+      left: 0;
+      margin-top: 0;
+    }
+
+    @include breakpoint(max-width 700px){
+      position: relative;
+      float: left;
+      width: 100%;
+      left: 0;
+      height: auto;
+      margin-top: 15px;
     }
 
     img, svg {
       size: 100%;
       object-fit: contain;
     }
-
   }
-
 }

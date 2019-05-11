@@ -1,0 +1,89 @@
+section.contacts
+
+    .container
+
+        h1.contacts__title Fotbalová škola Horsta Siegla
+
+        form#contacts-school-form.contacts__form.contacts__form--school
+
+            h3.contacts__form--title Terminy:
+
+            .contacts__dates
+                p 2.7. – 6. 7. 2018
+                p 3.7. – 13. 7. 2018
+                p 4.7. – 20. 7. 2018
+                p 5.7. – 27. 7. 2018
+
+            .contacts__left
+
+                label Jméno a příjmení
+
+                input#contacts-school-form-name.contacts__left--field(
+                type='text'
+                name='name'
+                minlength='2'
+                maxlength='100'
+                placeholder=''
+                required)
+
+                label Rodné číslo
+
+                input#contacts-school-form-uid.contacts__left--field(
+                    type='text'
+                    name='uid'
+                    minlength='2'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+                label Zvolený termín
+
+                input#contacts-school-form-date.contacts__left--field(
+                    type='text'
+                    name='date'
+                    minlength='2'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+                label Klubová příslušnost (pokud nějakou má)
+
+                input#contacts-school-form-member.contacts__left--field(
+                    type='text'
+                    name='member'
+                    minlength='2'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+            .contacts__right
+
+                label Telefonní kontakt na rodiče
+
+                input#contacts-school-form-phone.contacts__left--field(
+                    type='text'
+                    name='phone'
+                    minlength='8'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+                label Adresa
+
+                textarea#contacts-school-form-address.contacts__right--message.contacts__right--scholl-message(
+                    name='address'
+                    minlength='2'
+                    maxlength='250'
+                    required)
+
+                label E-mail
+
+                input#contacts-school-form-email.contacts__left--field(
+                    type='text'
+                    name='email'
+                    minlength='2'
+                    maxlength='100'
+                    placeholder=''
+                    required)
+
+            input#ccontacts-school-form-submit.contacts__submit(type='submit' value='Odeslat')

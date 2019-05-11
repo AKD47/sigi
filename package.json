@@ -1,7 +1,6 @@
 {
   "name": "sigi",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^7.2.5",
@@ -44,5 +43,6 @@
   "bugs": {
     "url": "https://github.com/AKD47/sigi/issues"
   },
-  "homepage": "https://github.com/AKD47/sigi#readme"
+  "homepage": "https://github.com/AKD47/sigi#readme",
+  "description": ""
 }
